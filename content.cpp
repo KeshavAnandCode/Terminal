@@ -9,7 +9,7 @@
 using namespace ftxui;
 
 // New reusable styles (orange/red theme)
-const auto theme_text_style        = color(Color::OrangeRed1) | bold | dim;mac o
+const auto theme_text_style        = color(Color::OrangeRed1) | bold | dim;
 const auto theme_border_style      = border | color(Color::Red);
 const auto theme_link_style        = color(Color::RedLight) | underlined;
 const auto theme_button_style      = color(Color::Red) | bold;

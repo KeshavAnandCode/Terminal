@@ -1,0 +1,10 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/keshavanand/Downloads/VSCode/Terminal/macbuild/cmake_install.cmake",
+		"/Users/keshavanand/Downloads/VSCode/Terminal/macbuild/ftxui/cmake_install.cmake",
+		"/Users/keshavanand/Downloads/VSCode/Terminal/macbuild/ftxui/examples/cmake_install.cmake",
+		"/Users/keshavanand/Downloads/VSCode/Terminal/macbuild/ftxui/doc/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

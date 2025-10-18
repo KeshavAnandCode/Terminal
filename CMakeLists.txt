@@ -21,3 +21,4 @@ target_link_libraries(portfolio
     ftxui::dom
     ftxui::component
 )
+
