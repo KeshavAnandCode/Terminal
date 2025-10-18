@@ -1,0 +1,1 @@
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/portfolio.dir/main.cpp.o CMakeFiles/portfolio.dir/content.cpp.o -o portfolio  ftxui/libftxui-screen.a ftxui/libftxui-dom.a ftxui/libftxui-component.a ftxui/libftxui-dom.a ftxui/libftxui-screen.a
