@@ -1,0 +1,3 @@
+/bin/bash -c "$(curl -fsSL https://terminalportfolio.keshavanand.net/run-mac.sh)" for Mac
+/bin/bash -c "$(curl -fsSL https://terminalportfolio.keshavanand.net/run-mac.sh)" for linux
+iwr -useb https://terminalportfolio.keshavanand.net/run-windows.ps1 | iex.  for Windows
