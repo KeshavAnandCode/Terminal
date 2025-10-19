@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Keshav Anand | Terminal Portfolio (Enhanced)</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+html, body {
+  margin: 0;
+  height: 100%;
+  font-family: "JetBrains Mono", monospace;
+  background: #000;
+  color: #00ffcc;
+  overflow: hidden;
+  transition: background 0.3s;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+:root {
+  --accent: #00ffcc;
+  --muted: rgba(0,255,200,0.12);
+  --panel-bg: rgba(0,15,20,0.65);
+  --panel-border: rgba(0,255,200,0.18);
+  --copy-hint-bg: rgba(0,0,0,0.7);
+  --cursor-glow: rgba(0,255,170,0.32);
+  --cursor-glow-strong: rgba(0,255,170,0.48);
+}
+
+/* Canvas Matrix Background */
+canvas#matrix {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: radial-gradient(ellipse at center, #000814 0%, #000 100%);
+  transition: background 0.5s ease;
+  mix-blend-mode: overlay;
+}
+
+/* Ambient Glow Animation */
+.ambient-glow {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: radial-gradient(circle at 60% 40%, rgba(0,150,255,0.08), transparent 70%);
+  animation: ambientShift 6s infinite alternate ease-in-out;
+  z-index: 0;
+  pointer-events: none;
+  transition: opacity 0.5s;
+}
+@keyframes ambientShift {
+  from { background: radial-gradient(circle at 60% 40%, rgba(0,150,255,0.08), transparent 70%); }
+  to   { background: radial-gradient(circle at 40% 60%, rgba(0,255,200,0.06), transparent 70%); }
+}
+
+/* Spotlight overlay */
+.spotlight {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: radial-gradient(circle at center, rgba(0,150,255,0.06), transparent 60%);
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 1;
+  transition: background-position 0.06s linear, opacity 0.12s;
+}
+
+/* Cursor Glow */
+#cursorGlow {
+  position: fixed;
+  width: 26vmin;
+  height: 26vmin;
+  pointer-events: none;
+  z-index: 1;
+  transform: translate(-50%, -50%) scale(1);
+  transition: width 0.12s ease, height 0.12s ease, opacity 0.12s ease;
+  opacity: 1;
+  border-radius: 50%;
+  mix-blend-mode: normal;
+  background: transparent;
+  filter: none;
+  will-change: transform, left, top;
+}
+
+/* Dark overlay */
+#darkenOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.0);
+  z-index: 0.5;
+  pointer-events: none;
+  transition: background 200ms ease;
+}
+
+/* Body hover bg */
+body.hover-bg { background: #010d0a; }
+
+/* Terminal container */
+.terminal-container {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%) scale(0.85);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  backdrop-filter: blur(10px) brightness(0.8);
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: 18px;
+  box-shadow: 0 0 25px rgba(0,255,200,0.12), inset 0 0 30px rgba(0,255,200,0.03);
+  padding: 2rem 3.5rem;
+  max-width: 98%;
+  overflow-x: auto;
+  white-space: nowrap;
+  transition: transform 0.8s cubic-bezier(0.68,-0.55,0.27,1.55);
+  min-width: 300px;
+}
+.terminal-container:focus { outline: none; }
+.terminal-container.active {
+  transform: translate(-50%, -50%) scale(1);
+  animation: glowPulse 1800ms ease-in-out infinite alternate;
+}
+@keyframes glowPulse {
+  0% { box-shadow: 0 0 25px rgba(0,255,200,0.12); }
+  50% { box-shadow: 0 0 55px rgba(0,255,200,0.26); }
+  100% { box-shadow: 0 0 70px rgba(0,255,200,0.34); }
+}
+
+/* Command line boxes */
+.command-line {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.8rem;
+  font-size: 1.25rem;
+  color: var(--accent);
+  text-shadow: 0 0 8px var(--accent);
+  user-select: none;
+  line-height: 1.5;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(0,255,200,0.12);
+  box-shadow: inset 0 0 15px rgba(0,255,200,0.03);
+  white-space: nowrap;
+  position: relative;
+  cursor: default;
+  transition: transform 0.18s, background 0.28s, box-shadow 0.18s;
+  min-width: 240px;
+  max-width: calc(100vw - 32px);
+}
+.command-line:focus { outline: none; box-shadow: 0 0 20px rgba(0,255,200,0.06); }
+.command-line:hover { transform: translateY(-2px); }
+.command-label, .os-label {
+  font-weight: 600;
+  color: #eee;
+  margin-right: 8px;
+  min-width: 90px;
+  text-align: right;
+  user-select: none;
+}
+.command-line.main-box {
+  cursor: default;
+  position: relative;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Command text */
+.cmd-text {
+  display: inline-block;
+  font-family: "JetBrains Mono", monospace;
+  font-size: clamp(0.85rem, 1.8vw, 1.1rem);
+  color: var(--accent);
+  white-space: pre;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: calc(100% - 64px);
+}
+@media (max-width: 700px) {
+  .command-line { white-space: normal; flex-wrap: wrap; gap: 6px; font-size: 1rem; }
+  .cmd-text { white-space: pre-wrap; word-break: break-word; max-width: 100%; }
+}
+@media (max-width: 500px) {
+  .terminal-container { padding: 1rem 1rem; min-width: 90%; transform: translate(-50%, -50%) scale(0.92); }
+  .command-line { font-size: 0.95rem; }
+  #cursorGlow { width: 36vmin; height: 36vmin; }
+}
+@media (max-width: 380px) {
+  .command-line { font-size: 0.9rem; padding: 0.5rem 0.6rem; gap: 4px; }
+  .cmd-text { font-size: 0.85rem; }
+}
+
+/* Copy button */
+.cmd-copy-btn {
+  margin-left: 12px;
+  background: transparent;
+  border: none;
+  color: var(--accent);
+  cursor: pointer;
+  font-size: 1.05rem;
+  padding: 6px 8px;
+  border-radius: 8px;
+  transition: transform 120ms ease, color 140ms ease, background 140ms ease;
+  display: inline-grid;
+  place-items: center;
+}
+.cmd-copy-btn:focus { outline: 2px solid rgba(0,255,200,0.14); transform: translateY(-1px); }
+.cmd-copy-btn:active { transform: scale(.98); }
+.cmd-copy-btn .fa-solid { pointer-events: none; }
+.cmd-copy-btn.success { color: #39ff14; }
+.cmd-copy-btn.fail { color: #ff7777; }
+
+.has-copy-hint { position: relative; }
+.has-copy-hint::after {
+  content: attr(data-copy-hint);
+  position: absolute;
+  top: -1.85rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.72rem;
+  color: #fff;
+  background: var(--copy-hint-bg);
+  padding: 3px 8px;
+  border-radius: 6px;
+  pointer-events: none;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.15s ease, transform 0.12s ease;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+  z-index: 6;
+  display: block;
+}
+.has-copy-hint:hover::after,
+.has-copy-hint:focus::after,
+.has-copy-hint:active::after { opacity: 1; transform: translateX(-50%) translateY(-2px); }
+.command-line.main-box.has-copy-hint::after { display: none; }
+.has-copy-hint.show-hint::after,
+.command-line.main-box.has-copy-hint.show-hint::after { display: block; opacity: 1; transform: translateX(-50%) translateY(-2px); }
+
+/* Other OS toggle */
+.other-os-toggle {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 0.5rem 0.8rem; margin-top: 0.6rem;
+  cursor: pointer; user-select: none;
+  border-radius: 8px; border: 1px solid rgba(0,255,200,0.08);
+  background: rgba(0,0,0,0.25); color: #39a0ff; font-weight: 600;
+  transition: transform 0.16s ease, background 0.18s;
+}
+.other-os-toggle:hover { transform: translateY(-3px); background: rgba(0,255,200,0.03); }
+
+.other-os-container {
+  display: flex; flex-direction: column; gap: 0.6rem;
+  margin-top: 1rem; max-height: 0; overflow: hidden;
+  transition: max-height 0.6s cubic-bezier(.2,.9,.2,1), opacity 0.5s;
+  opacity: 0; width: 100%; z-index: 3;
+}
+.other-os-container.show { max-height: 800px; opacity: 1; padding-top: 0.8rem; }
+.other-os-wrapper { display: flex; align-items: center; gap: 10px; }
+.other-os {
+  background: rgba(0,0,0,0.25); border: 1px solid rgba(0,255,200,0.12);
+  border-radius: 6px; padding: 0.5rem 0.7rem; font-size: 0.85rem;
+  cursor: default; position: relative; transition: background 0.14s, transform 0.14s, box-shadow 0.14s;
+  flex: 1; text-align: left; overflow-x: auto; white-space: pre;
+  display: flex; align-items: center; gap: 10px;
+}
+.other-os:hover { background: rgba(0,255,200,0.08); transform: none; box-shadow: 0 0 14px rgba(0,255,200,0.08); }
+.other-os::after {
+  content: attr(data-copy-hint); position: absolute; top: -1.2rem; left: 50%;
+  transform: translateX(-50%); font-size: 0.72rem; color: #fff;
+  background: rgba(0,0,0,0.6); padding: 2px 6px; border-radius: 4px;
+  pointer-events: none; white-space: nowrap; opacity: 0; transition: opacity 0.12s;
+}
+.other-os:hover::after { opacity: 1; }
+.other-os.copied { animation: copiedPulse 420ms ease forwards; background: rgba(0,255,200,0.14) !important; box-shadow: 0 10px 34px rgba(0,255,170,0.06) !important; transform: none !important; }
+.other-os.copy-fail { animation: copyFailPulse 420ms ease forwards; background: rgba(255,80,80,0.12) !important; box-shadow: 0 10px 34px rgba(255,90,90,0.06) !important; transform: scale(0.995) !important; }
+@keyframes copiedPulse { 0% { opacity: 0.98; } 40% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes copyFailPulse { 0% { transform: scale(1); opacity: 0.98; } 40% { transform: scale(0.995); opacity: 1; } 100% { transform: scale(0.995); opacity: 1; } }
+
+/* Dropdowns */
+.dropdown {
+  position: absolute; bottom: 5%; width: 100%; text-align: center;
+  z-index: 2; background: rgba(0,0,0,0.65); border-top: 1px solid rgba(0,255,200,0.1);
+  box-shadow: inset 0 0 20px rgba(0,255,200,0.05);
+  padding-bottom: 0.5rem; opacity: 0; transform: scale(0.8);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+.dropdown.show { opacity: 1; transform: scale(1); animation: bangPop 0.6s ease-out forwards; }
+@keyframes bangPop { 0% { transform: scale(0.3) rotate(-15deg); opacity:0; } 50% { transform: scale(1.2) rotate(10deg); opacity:1; } 70% { transform: scale(0.95) rotate(-5deg); } 100% { transform: scale(1) rotate(0deg); } }
+.dropdown-toggle { display: inline-block; cursor: pointer; padding: 0.8rem; color: #39a0ff; font-weight: 600; font-family: "JetBrains Mono", monospace; font-size: 1.2rem; letter-spacing: 1px; position: relative; overflow: hidden; white-space: nowrap; }
+.dropdown-content { display: none; padding: 1rem 2rem; color: var(--accent); font-size: 0.95rem; max-width: 800px; margin: 0 auto; text-align: left; font-family: "JetBrains Mono", monospace; background: rgba(0,15,20,0.85); border: 1px solid rgba(0,255,200,0.12); border-radius: 10px; box-shadow: 0 0 25px rgba(0,255,200,0.15); }
+.dropdown.open .dropdown-content { display: block; animation: fadeIn 0.3s ease; }
+@keyframes fadeIn { from {opacity: 0; transform: translateY(6px); } to {opacity: 1; transform: translateY(0); } }
+
+/* HOW IT WORKS section */
+.how-section { display: block; padding: 0.6rem 0.6rem; color: var(--accent); }
+.how-intro { margin-bottom: 0.6rem; font-size: 0.95rem; line-height: 1.45; color: rgba(255,255,255,0.92); }
+.how-list { counter-reset: step; list-style: none; padding: 0; margin: 0; }
+.how-list li {
+  position: relative; padding: 0.85rem 0.8rem 0.85rem 3.8rem; margin-bottom: 0.5rem; border-radius: 8px;
+  background: linear-gradient(90deg, rgba(0,255,200,0.03), rgba(0,0,0,0.02));
+  border-left: 2px solid rgba(0,255,200,0.06);
+  overflow: hidden; opacity: 0; transform: translateY(10px) scale(0.995);
+  box-shadow: inset 0 -6px 12px rgba(0,0,0,0.25);
+}
+.how-list li::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute; left: 12px; top: 50%; transform: translateY(-50%);
+  width: 36px; height: 36px; border-radius: 8px; display: inline-grid; place-items: center;
+  font-weight: 700; color: #001;
+  background: linear-gradient(135deg,#00ffcc,#39a0ff);
+  box-shadow: 0 4px 18px rgba(0,255,170,0.06); font-size: 0.95rem;
+}
+.how-list li h4 { margin: 0 0 0.25rem 0; font-size: 0.95rem; color: #e8fff7; letter-spacing: 0.2px; }
+.how-list li p { margin: 0; color: rgba(220,255,244,0.92); font-size: 0.86rem; line-height: 1.35; }
+.how-list li.revealed { animation: listReveal 420ms cubic-bezier(.2,.9,.2,1) forwards; }
+@keyframes listReveal { from { opacity: 0; transform: translateY(10px) scale(0.995); } to { opacity: 1; transform: translateY(0) scale(1); } }
+
+/* Repo Button */
+.repo-wrap { margin-top: 0.9rem; display: flex; justify-content: center; }
+.repo-btn {
+  --g: linear-gradient(90deg,#00ffcc,#39a0ff);
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(0,255,200,0.12); color: #e9fff9; padding: 0.6rem 1rem; border-radius: 8px;
+  font-weight: 700; text-decoration: none; font-family: "JetBrains Mono", monospace;
+  display: inline-flex; gap: 0.6rem; align-items: center; transition: transform 220ms ease, box-shadow 220ms ease;
+  box-shadow: 0 6px 30px rgba(0,255,170,0.04); position: relative; overflow: hidden;
+}
+.repo-btn::after { content: ""; position: absolute; inset: 0; background: linear-gradient(120deg, rgba(0,255,170,0.04), rgba(57,160,255,0.04)); transform: translateX(-100%); transition: transform 420ms ease; pointer-events: none; }
+.repo-btn:hover { transform: translateY(-4px); box-shadow: 0 18px 60px rgba(0,255,170,0.06); }
+.repo-btn:hover::after { transform: translateX(0); }
+.repo-icon { width: 18px; height: 18px; display: inline-grid; place-items: center; font-size: 0.9rem; color: var(--accent); }
+
+/* Cursor blinking */
+.cursor { display: inline-block; width: 6px; height: 18px; background: var(--accent); margin-left: 4px; animation: blink 1s infinite; vertical-align: bottom; border-radius: 2px; }
+@keyframes blink { 0%,50% { opacity: 1; transform: scaleY(1); } 50.1%,100% { opacity: 0; transform: scaleY(0.6); } }
+
+/* Warning text */
+.warning { font-size: 0.85rem; color: #ff4444; margin-top: 0.8rem; opacity: 0.95; animation: neonGlow 2s infinite alternate; }
+@keyframes neonGlow { 0% { text-shadow: 0 0 5px #ff4444,0 0 10px #ff4444; } 50% { text-shadow:0 0 10px #ff7777,0 0 20px #ff7777; } 100% { text-shadow:0 0 5px #ff4444,0 0 10px #ff4444; } }
+
+/* Fade out */
+.fade-out { animation: fadeOutScale 400ms ease forwards; }
+@keyframes fadeOutScale { from { opacity:1; transform: scale(1); } to { opacity:0; transform: scale(0.95); } }
+
+/* Media Queries for responsive scaling */
+@media (max-width: 980px) {
+  .terminal-container { padding: 1.8rem 1.6rem; min-width: unset; max-width: 94vw; transform-origin: center; }
+  .command-line { font-size: 1.05rem; min-width: unset; max-width: calc(100vw - 32px); white-space: normal; }
+  #cursorGlow { width: 48vmin; height: 48vmin; }
+}
+@media (max-width: 900px) {
+  .terminal-container { padding: 1.2rem 1.4rem; white-space: normal; transform: translate(-50%,-50%) scale(0.95); }
+  .command-line { font-size: 1rem; flex-wrap: wrap; gap: 6px; }
+  .other-os-container { justify-content: flex-start; }
+}
+@media (max-width: 500px) {
+  .terminal-container { padding: 1rem 1rem; min-width: 90%; transform: translate(-50%, -50%) scale(0.92); }
+  .command-line { font-size: 0.95rem; }
+  #cursorGlow { width: 36vmin; height: 36vmin; }
+}
+@media (max-width: 480px) {
+  .command-line { font-size: 0.9rem; padding: 0.5rem 0.6rem; gap: 4px; }
+  .cmd-text { font-size: 0.85rem; }
+}
+</style>
+
+</head>
+<body>
+  <canvas id="matrix" aria-hidden="true"></canvas>
+  <div class="ambient-glow" aria-hidden="true"></div>
+  <div class="spotlight" id="spotlight" aria-hidden="true"></div>
+  <div id="cursorGlow" aria-hidden="true"></div>
+  <div id="darkenOverlay" aria-hidden="true"></div>
+
+  <!-- offscreen aria live for screen reader feedback -->
+  <div id="ariaStatus" aria-live="polite" style="position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden;"></div>
+
+  <div class="terminal-container" id="terminal" role="region" aria-label="Terminal portfolio" tabindex="0">
+    <span class="os-label" id="mainOSLabel" aria-hidden="true"></span>
+
+    <!-- IMPORTANT: removed has-copy-hint from main box to remove hover "Click to copy" prompt.
+         Copy button will be added to the right (by JS) for the main command. -->
+    <div class="command-line main-box" id="osCommand">
+      <span class="cursor" aria-hidden="true"></span>
+      <span class="cmd-text">Detecting your OS...</span>
+      <!-- copy button will be appended by JS -->
+    </div>
+
+    <div class="warning" role="alert">⚠ Run at your own risk</div>
+
+    <div style="width:100%; display:flex; justify-content: center;">
+      <div class="other-os-toggle" id="otherOsToggle" role="button" aria-pressed="false" tabindex="0">
+        <i class="fa-solid fa-terminal" style="font-size:0.9rem;"></i>
+        <span id="otherToggleText">▼ Show other OS commands</span>
+      </div>
+    </div>
+
+    <div class="other-os-container" id="otherOSContainer" aria-hidden="true"></div>
+  </div>
+
+  <div class="dropdown" id="dropdown" aria-hidden="false">
+    <div class="dropdown-toggle typing" id="dropdownToggle"><span>▼ How It Works</span></div>
+    <div class="dropdown-content" role="region" aria-label="How it works">
+      <!-- Replaced lorem ipsum with a polished, numbered explanation.
+           This section is intentionally descriptive (no installer preview). -->
+      <div class="how-section">
+
+
+        <ol class="how-list" id="howList">
+          <li>
+            <h4>Executable-driven UI</h4>
+            <p>The portfolio is rendered by a native executable built with C++ and the FTXUI library — the app draws an interactive, rich interface directly inside the terminal window.</p>
+          </li>
+
+          <li>
+            <h4>Cross-platform builds</h4>
+            <p>Prebuilt binaries are provided for macOS, Windows and Linux (x64). Each binary is compiled to use the host shell as the UI surface so the experience feels native.</p>
+          </li>
+
+          <li>
+            <h4>Command-outlined install flow</h4>
+            <p>The visible terminal command on this page only instructs the shell to fetch the project's runtime assets from the repository and run the appropriate executable for the host OS — the installer commands are run by the shell and kept out of this explanation for safety.</p>
+          </li>
+
+          <li>
+            <h4>Repository-first model</h4>
+            <p>All source, build scripts, and assets are available in the repository. If you want to inspect, build, or audit anything, the GitHub link provides the full codebase and release binaries.</p>
+          </li>
+
+          <li>
+            <h4>Safe & auditable</h4>
+            <p>The design keeps installation steps explicit and auditable: you can review the scripts in the repo before running anything locally — useful when you prefer to vet code first.</p>
+          </li>
+        </ol>
+
+        <div class="repo-wrap">
+          <a class="repo-btn" id="repoBtn" href="https://github.com/KeshavAnandCode/Terminal" target="_blank" rel="noopener noreferrer" aria-label="Open source repository">
+            <span class="repo-icon"><i class="fa-brands fa-github"></i></span>
+            <span>View source on GitHub</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const $ = s => document.querySelector(s);
+    const $$ = s => Array.from(document.querySelectorAll(s));
+    const ariaStatus = document.getElementById('ariaStatus');
+
+    async function safeCopy(text) {
+      try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          await navigator.clipboard.writeText(text);
+          return true;
+        } else {
+          const ta = document.createElement('textarea');
+          ta.value = text;
+          ta.setAttribute('readonly', '');
+          ta.style.position = 'absolute';
+          ta.style.left = '-9999px';
+          document.body.appendChild(ta);
+          ta.select();
+          try {
+            document.execCommand('copy');
+            document.body.removeChild(ta);
+            return true;
+          } catch (err) {
+            document.body.removeChild(ta);
+            return false;
+          }
+        }
+      } catch (err) {
+        console.warn('Copy failed', err);
+        return false;
+      }
+    }
+
+    /* matrix */
+    const canvas = document.getElementById('matrix');
+    const ctx = canvas.getContext('2d');
+    let width  = canvas.width  = window.innerWidth;
+    let height = canvas.height = window.innerHeight;
+    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&";
+    const fontSize = 14;
+    let columns = Math.floor(width / fontSize);
+    const drops = Array.from({length: columns}, () => Math.floor(Math.random() * 40) + 1);
+    function drawMatrixFrame() {
+      ctx.fillStyle = "rgba(0, 0, 0, 0.06)";
+      ctx.fillRect(0, 0, width, height);
+      ctx.fillStyle = "#00ffcc";
+      ctx.font = fontSize + "px JetBrains Mono";
+      for (let i = 0; i < drops.length; i++) {
+        const text = letters.charAt(Math.floor(Math.random() * letters.length));
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+        if (drops[i] * fontSize > height && Math.random() > 0.975) {
+          drops[i] = 0;
+        }
+        drops[i]++;
+      }
+    }
+    const MATRIX_INTERVAL_MS = 40;
+    drawMatrixFrame();
+    const matrixInterval = setInterval(drawMatrixFrame, MATRIX_INTERVAL_MS);
+    window.addEventListener('resize', () => {
+      const oldColumns = columns;
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+      columns = Math.floor(width / fontSize);
+      if (columns > oldColumns) {
+        for (let i = 0; i < columns - oldColumns; i++) {
+          drops.push(Math.floor(Math.random() * 40) + 1);
+        }
+      } else if (columns < oldColumns) {
+        drops.length = columns;
+      }
+    });
+
+    const spotlight = document.getElementById('spotlight');
+    const cursorGlow = document.getElementById('cursorGlow');
+    const darkenOverlay = document.getElementById('darkenOverlay');
+
+    function throttle(fn, wait = 16) {
+      let last = 0;
+      return (...args) => {
+        const now = performance.now();
+        if (now - last >= wait) {
+          last = now;
+          fn(...args);
+        }
+      };
+    }
+
+    // Mousemove: only move the cursorGlow element; do NOT alter background brightness or spotlight.
+    document.addEventListener('mousemove', throttle((e) => {
+      cursorGlow.style.left = e.clientX + 'px';
+      cursorGlow.style.top  = e.clientY + 'px';
+      const speed = Math.sqrt((e.movementX||0)*(e.movementX||0) + (e.movementY||0)*(e.movementY||0));
+      if (speed > 8) {
+        cursorGlow.style.transform = 'translate(-50%, -50%) scale(1.08)';
+        cursorGlow.style.opacity = '1';
+      } else {
+        cursorGlow.style.transform = 'translate(-50%, -50%) scale(1)';
+        cursorGlow.style.opacity = '1';
+      }
+      document.body.classList.add('hover-bg');
+      // IMPORTANT: do NOT change spotlight, darkenOverlay, canvas opacity, or cursor filters here.
+    }, 12));
+
+    document.addEventListener('mouseleave', () => {
+      document.body.classList.remove('hover-bg');
+      cursorGlow.style.opacity = '0';
+      // Do NOT modify darkenOverlay here; keep background unchanged.
+    });
+
+    document.addEventListener('touchstart', (ev) => {
+      const t = ev.touches[0];
+      if (t) {
+        cursorGlow.style.left = t.clientX + 'px';
+        cursorGlow.style.top  = t.clientY + 'px';
+        cursorGlow.style.opacity = '1';
+      }
+    });
+
+    function distanceFromCenter(x,y){
+      const cx = window.innerWidth/2;
+      const cy = window.innerHeight/2;
+      const dx = (x - cx) / (window.innerWidth/2);
+      const dy = (y - cy) / (window.innerHeight/2);
+      return Math.sqrt(dx*dx + dy*dy);
+    }
+
+    // Make updateBackgroundDarkness a no-op so cursor movement won't alter background appearance.
+    function updateBackgroundDarkness(x,y){
+      // intentionally empty to preserve continuous background visuals regardless of cursor
+      return;
+    }
+
+    const osCommand = document.getElementById('osCommand');
+    const otherOSContainer = document.getElementById('otherOSContainer');
+    const mainOSLabel = document.getElementById('mainOSLabel');
+
+    const commands = {
+      Windows: `iwr https://terminalportfolio.keshavanand.net/run-windows.bat -OutFile $env:TEMP\\run-windows.bat; Start-Process $env:TEMP\\run-windows.bat -Wait`,
+      macOS: `/bin/bash -c "$(curl -fsSL https://terminalportfolio.keshavanand.net/run-mac.sh)"`,
+      Linux: `/bin/bash -c "$(curl -fsSL https://terminalportfolio.keshavanand.net/run-linux.sh)"`,
+    };
+
+    function detectOS() {
+      const platform = (navigator.platform || '').toLowerCase();
+      if (platform.includes("win")) return "Windows";
+      if (platform.includes("mac")) return "macOS";
+      if (platform.includes("linux")) return "Linux";
+      const ua = (navigator.userAgent || '').toLowerCase();
+      if (ua.includes('android')) return "Linux";
+      if (ua.includes('iphone') || ua.includes('ipad') || ua.includes('ipod')) return "macOS";
+      return "Unknown";
+    }
+
+    const userOS = detectOS();
+
+    /* helper: build a copy button that immediately shows success/fail */
+    function makeCopyButton(commandText, ariaLabel) {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'cmd-copy-btn';
+      btn.setAttribute('aria-label', ariaLabel || 'Copy command');
+      btn.innerHTML = '<i class="fa-solid fa-copy"></i>';
+
+      btn.addEventListener('click', async (ev) => {
+        ev.stopPropagation();
+        // immediate visual feedback: show check
+        btn.classList.remove('fail');
+        btn.classList.add('success');
+        btn.innerHTML = '<i class="fa-solid fa-check"></i>';
+        try { ariaStatus.textContent = 'Copied to clipboard'; } catch(e){}
+
+        const ok = await safeCopy(commandText);
+        if (!ok) {
+          // swap to fail state
+          btn.classList.remove('success');
+          btn.classList.add('fail');
+          btn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+          try { ariaStatus.textContent = 'Copy failed'; } catch(e){}
+        }
+        // revert after short delay (keeps immediate feedback but resets)
+        setTimeout(() => {
+          btn.classList.remove('success','fail');
+          btn.innerHTML = '<i class="fa-solid fa-copy"></i>';
+        }, 1200);
+      }, { passive: false });
+
+      btn.addEventListener('keydown', (ev) => {
+        if (ev.key === ' ' || ev.key === 'Enter') {
+          ev.preventDefault();
+          btn.click();
+        }
+      });
+
+      return btn;
+    }
+
+    /* create an other-os box with text + copy button */
+    function createOSBox(os, command, container) {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'other-os-wrapper';
+      const label = document.createElement('div');
+      label.className = 'command-label';
+      label.textContent = os;
+      label.setAttribute('aria-hidden', 'true');
+
+      const box = document.createElement('div');
+      box.className = 'other-os has-copy-hint';
+      box.setAttribute('tabindex', '0');
+
+      const textSpan = document.createElement('span');
+      textSpan.className = 'cmd-text';
+      textSpan.textContent = command;
+
+      const btn = makeCopyButton(command, `Copy ${os} command`);
+      // append text and button inside box
+      box.appendChild(textSpan);
+      box.appendChild(btn);
+
+      // also keep the existing behavior where clicking the whole box copies
+      // — but since we now have an explicit button, preserve both (for mouse & keyboard)
+      box.addEventListener('click', async (ev) => {
+        // if click target was the button, it already handled; else emulate button click
+        if (ev.target.closest('.cmd-copy-btn')) return;
+        try { const sel = window.getSelection && window.getSelection(); if (sel) sel.removeAllRanges(); } catch(e){}
+        // show immediate hint and effect
+        box.classList.remove('copy-fail');
+        box.classList.add('copied');
+        box.setAttribute('data-copy-hint', 'Copied');
+        box.classList.add('show-hint');
+        try { ariaStatus.textContent = 'Copied to clipboard'; } catch(e){}
+        const ok = await safeCopy(command);
+        if (!ok) {
+          box.classList.remove('copied');
+          box.classList.add('copy-fail');
+          box.setAttribute('data-copy-hint', 'Copy failed');
+          try { ariaStatus.textContent = 'Copy failed'; } catch(e){}
+        }
+        setTimeout(()=> {
+          box.classList.remove('copied','copy-fail','show-hint');
+          box.setAttribute('data-copy-hint', prevHint);
+        }, 1200);
+      });
+
+      box.addEventListener('keydown', (ev) => {
+        if (ev.key === 'Enter' || ev.key === ' ') {
+          ev.preventDefault();
+          btn.focus();
+          btn.click();
+        }
+      });
+
+      wrapper.appendChild(label);
+      wrapper.appendChild(box);
+      container.appendChild(wrapper);
+    }
+
+    /* render UI */
+    otherOSContainer.innerHTML = '';
+
+    if (userOS === "Unknown") {
+      mainOSLabel.textContent = "(Unknown)";
+      const mainTextSpan = osCommand.querySelector('.cmd-text');
+      if (mainTextSpan) mainTextSpan.textContent = 'Unknown OS detected. Click ▼ to expand commands.';
+      // add hint for the main area? user wanted the main prompt not to show click-to-copy; so we leave it without a hover hint.
+      for (const os in commands) createOSBox(os, commands[os], otherOSContainer);
+    } else {
+      mainOSLabel.textContent = `(${userOS})`;
+      const mainTextSpan = osCommand.querySelector('.cmd-text');
+      if (mainTextSpan) mainTextSpan.textContent = commands[userOS];
+
+      // create copy button for main command (explicit button only)
+      // remove any preexisting button
+      const existing = osCommand.querySelector('.cmd-copy-btn');
+      if (existing) existing.remove();
+      const mainBtn = makeCopyButton(commands[userOS], `Copy ${userOS} command`);
+      // append to main box
+      osCommand.appendChild(mainBtn);
+
+      // For keyboard users: pressing Enter/Space on the main box should activate the copy button
+      osCommand.setAttribute('tabindex','0');
+      osCommand.addEventListener('keydown', (ev) => {
+        if (ev.key === 'Enter' || ev.key === ' ') {
+          ev.preventDefault();
+          mainBtn.focus();
+          mainBtn.click();
+        }
+      });
+
+      // create other OS boxes for the rest
+      for (const os in commands) {
+        if (os !== userOS) createOSBox(os, commands[os], otherOSContainer);
+      }
+    }
+
+    /* toggle other os list */
+    const otherToggle = document.getElementById('otherOsToggle');
+    const otherToggleText = document.getElementById('otherToggleText');
+
+    function setOtherContainerState(show) {
+      if (show) {
+        otherOSContainer.classList.add('show');
+        otherOSContainer.setAttribute('aria-hidden','false');
+        otherToggle.setAttribute('aria-pressed','true');
+        otherToggleText.textContent = '▲ Hide other OS commands';
+        otherOSContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      } else {
+        otherOSContainer.classList.remove('show');
+        otherOSContainer.setAttribute('aria-hidden','true');
+        otherToggle.setAttribute('aria-pressed','false');
+        otherToggleText.textContent = '▼ Show other OS commands';
+      }
+    }
+
+    let otherVisible = false;
+    setOtherContainerState(false);
+
+    otherToggle.addEventListener('click', () => {
+      otherVisible = !otherVisible;
+      setOtherContainerState(otherVisible);
+    });
+    otherToggle.addEventListener('keydown', (ev) => {
+      if (ev.key === 'Enter' || ev.key === ' ') {
+        ev.preventDefault();
+        otherToggle.click();
+      }
+    });
+
+    /* dropdown / how it works */
+    const dropdown = document.getElementById('dropdown');
+    const toggle = document.getElementById('dropdownToggle');
+    toggle.addEventListener('click', () => {
+      dropdown.classList.toggle('open');
+      if (dropdown.classList.contains('open')) {
+        staggerRevealHowList();
+      } else {
+        clearHowListReveal();
+      }
+    });
+    setTimeout(()=>dropdown.classList.add('show'), 1500);
+    const terminal = document.getElementById('terminal');
+    setTimeout(()=>terminal.classList.add('active'),100);
+
+    (function devSummary(){
+      try {
+        console.groupCollapsed('%cTerminal Portfolio — Debug Summary', 'color: #00ffcc; font-weight:700; background:#001; padding:6px;');
+        console.log('Detected OS:', userOS);
+        console.log('Commands available:', Object.keys(commands));
+        console.log('Matrix interval (ms):', MATRIX_INTERVAL_MS);
+        console.groupEnd();
+      } catch(e) { }
+    })();
+
+    document.addEventListener('keydown', (ev) => {
+      const tag = document.activeElement && document.activeElement.tagName;
+      if (tag === 'INPUT' || tag === 'TEXTAREA') return;
+      if (ev.key.toLowerCase() === 't') {
+        otherToggle.click();
+      }
+      if (ev.key.toLowerCase() === 'h') {
+        toggle.click();
+      }
+    });
+
+    window.addEventListener('beforeunload', () => {
+      try {
+        clearInterval(matrixInterval);
+      } catch (e) { }
+    });
+
+    (function globalCopyTooltip(){
+      let tip = document.createElement('div');
+      tip.style.position = 'fixed';
+      tip.style.padding = '6px 10px';
+      tip.style.background = 'rgba(0,0,0,0.85)';
+      tip.style.color = '#fff';
+      tip.style.fontFamily = '"JetBrains Mono", monospace';
+      tip.style.fontSize = '12px';
+      tip.style.borderRadius = '6px';
+      tip.style.pointerEvents = 'none';
+      tip.style.opacity = '0';
+      tip.style.transform = 'translate(-50%,-140%)';
+      tip.style.transition = 'opacity 120ms ease, transform 120ms ease';
+      tip.style.zIndex = 9999;
+      document.body.appendChild(tip);
+
+      let active = null;
+      function showTipFor(el, evt){
+        tip.textContent = text;
+        const x = evt.clientX || window.innerWidth/2;
+        const y = (evt.clientY || window.innerHeight/2) - 10;
+        tip.style.left = x + 'px';
+        tip.style.top = y + 'px';
+        tip.style.opacity = '1';
+        tip.style.transform = 'translate(-50%,-120%)';
+      }
+      function hideTip(){
+        tip.style.opacity = '0';
+        tip.style.transform = 'translate(-50%,-140%)';
+      }
+
+      document.addEventListener('mousemove', throttle((e)=>{
+        const target = e.target.closest && e.target.closest('.has-copy-hint');
+        if (target) {
+          showTipFor(target, e);
+          active = target;
+        } else {
+          active = null;
+          hideTip();
+        }
+      }, 16));
+
+      document.addEventListener('mouseleave', hideTip);
+      document.addEventListener('scroll', hideTip, true);
+      document.addEventListener('touchstart', (ev)=>{
+        const t = ev.touches[0];
+        if (!t) return;
+        const el = document.elementFromPoint(t.clientX, t.clientY);
+        const target = el && el.closest && el.closest('.has-copy-hint');
+        if (target) showTipFor(target, t);
+      }, {passive:true});
+    })();
+
+    (function ensureOtherOSCopyHints(){
+      const others = document.querySelectorAll('.other-os');
+      others.forEach(el => {
+        if(!el.classList.contains('has-copy-hint')) el.classList.add('has-copy-hint');
+      });
+      const main = document.querySelectorAll('.command-line');
+      main.forEach(el => {
+        // main intentionally does not get a hover copy prompt by default
+        // but ensure if any element needs the class it's present
+        // (do not add has-copy-hint to main)
+      });
+    })();
+
+    (function enhanceHowItWorksTyping(){
+      const toggleEl = document.getElementById('dropdownToggle');
+      const showAfterMs = 1500;
+      function typeText(el, text, speed=60, caret=true){
+        el.textContent = '';
+        let i = 0;
+        if(caret){
+          el.style.borderRight = '2px solid #00ffcc';
+        }
+        const interval = setInterval(()=> {
+          if(i < text.length){
+            el.textContent += text[i++];
+          } else {
+            clearInterval(interval);
+            if(caret) el.style.borderRight = 'none';
+          }
+        }, speed);
+      }
+
+      const origContent = toggleEl.innerHTML;
+      setTimeout(()=>{
+        dropdown.classList.add('show');
+        toggleEl.innerHTML = '';
+        toggleEl.setAttribute('aria-hidden','false');
+        const span = document.createElement('span');
+        span.textContent = '';
+        span.style.display = 'inline-block';
+        span.style.whiteSpace = 'pre';
+        span.style.overflow = 'hidden';
+        span.style.fontFamily = '"JetBrains Mono", monospace';
+        span.style.fontSize = '1.05rem';
+        toggleEl.appendChild(span);
+        setTimeout(()=> {
+          typeText(span, '▼ How It Works', 60, true);
+        }, 260);
+      }, showAfterMs);
+      toggleEl.addEventListener('click', ()=>{
+        const wasOpen = dropdown.classList.contains('open');
+        if(!wasOpen){
+          const span = toggleEl.querySelector('span');
+          if(span) {
+            span.textContent = '';
+            typeText(span, '▼ How It Works', 45, true);
+          }
+        }
+      });
+    })();
+
+    (function startWithBlueAmbient(){
+      const ag = document.querySelector('.ambient-glow');
+      ag.style.background = 'radial-gradient(circle at 60% 40%, rgba(0,150,255,0.08), transparent 70%)';
+      const sp = document.getElementById('spotlight');
+      sp.style.background = 'radial-gradient(circle at center, rgba(0,150,255,0.06), transparent 60%)';
+      const cvs = document.getElementById('matrix');
+      cvs.style.background = 'radial-gradient(ellipse at center, #000814 0%, #000 100%)';
+    })();
+
+    (function strengthenCursorGlowAndDarkenBackground(){
+      const cg = document.getElementById('cursorGlow');
+      // Keep cursor glow element present but transparent so it never alters background.
+      cg.style.background = 'transparent';
+      cg.style.filter = 'none';
+      cg.style.width = '22vmin';
+      cg.style.height = '22vmin';
+      darkenOverlay.style.background = 'rgba(0,0,0,0.0)';
+      canvas.style.transition = 'opacity 240ms linear';
+    })();
+
+    (function preserveEverythingElse(){ })();
+
+    /* ========== How list reveal helpers ========== */
+    function staggerRevealHowList() {
+      const list = document.getElementById('howList');
+      if (!list) return;
+      const items = Array.from(list.children);
+      // Clear any previous state:
+      items.forEach(it => it.classList.remove('revealed'));
+      // Staggered reveal
+      items.forEach((it, idx) => {
+        setTimeout(() => it.classList.add('revealed'), idx * 120 + 80);
+      });
+    }
+    function clearHowListReveal() {
+      const list = document.getElementById('howList');
+      if (!list) return;
+      Array.from(list.children).forEach(it => it.classList.remove('revealed'));
+    }
+
+  </script>
+</body>
+</html>
