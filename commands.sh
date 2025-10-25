@@ -2,7 +2,7 @@
 
 #macos
 
-ccd ~/Downloads/VSCode/Terminal
+cd ~/Downloads/VSCode/Terminal
 rm -rf macbuild
 mkdir macbuild
 cd macbuild
