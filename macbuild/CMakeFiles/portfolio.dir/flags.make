@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -isystem /Users/keshavanand/Downloads/VSCode/Terminal/ftxui/include
+CXX_INCLUDES = -isystem /Users/keshavanand/Downloads/Code/Terminal/ftxui/include
 
 CXX_FLAGSarm64 = -std=c++20 -arch arm64
 

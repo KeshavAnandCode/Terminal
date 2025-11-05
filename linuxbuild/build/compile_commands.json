@@ -1,0 +1,458 @@
+[
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -I/src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/screen.dir/src/ftxui/screen/box.cpp.o -c /src/ftxui/src/ftxui/screen/box.cpp",
+  "file": "/src/ftxui/src/ftxui/screen/box.cpp",
+  "output": "ftxui/CMakeFiles/screen.dir/src/ftxui/screen/box.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -I/src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/screen.dir/src/ftxui/screen/color.cpp.o -c /src/ftxui/src/ftxui/screen/color.cpp",
+  "file": "/src/ftxui/src/ftxui/screen/color.cpp",
+  "output": "ftxui/CMakeFiles/screen.dir/src/ftxui/screen/color.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -I/src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/screen.dir/src/ftxui/screen/color_info.cpp.o -c /src/ftxui/src/ftxui/screen/color_info.cpp",
+  "file": "/src/ftxui/src/ftxui/screen/color_info.cpp",
+  "output": "ftxui/CMakeFiles/screen.dir/src/ftxui/screen/color_info.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -I/src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/screen.dir/src/ftxui/screen/image.cpp.o -c /src/ftxui/src/ftxui/screen/image.cpp",
+  "file": "/src/ftxui/src/ftxui/screen/image.cpp",
+  "output": "ftxui/CMakeFiles/screen.dir/src/ftxui/screen/image.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -I/src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/screen.dir/src/ftxui/screen/screen.cpp.o -c /src/ftxui/src/ftxui/screen/screen.cpp",
+  "file": "/src/ftxui/src/ftxui/screen/screen.cpp",
+  "output": "ftxui/CMakeFiles/screen.dir/src/ftxui/screen/screen.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -I/src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/screen.dir/src/ftxui/screen/string.cpp.o -c /src/ftxui/src/ftxui/screen/string.cpp",
+  "file": "/src/ftxui/src/ftxui/screen/string.cpp",
+  "output": "ftxui/CMakeFiles/screen.dir/src/ftxui/screen/string.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -I/src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/screen.dir/src/ftxui/screen/terminal.cpp.o -c /src/ftxui/src/ftxui/screen/terminal.cpp",
+  "file": "/src/ftxui/src/ftxui/screen/terminal.cpp",
+  "output": "ftxui/CMakeFiles/screen.dir/src/ftxui/screen/terminal.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/automerge.cpp.o -c /src/ftxui/src/ftxui/dom/automerge.cpp",
+  "file": "/src/ftxui/src/ftxui/dom/automerge.cpp",
+  "output": "ftxui/CMakeFiles/dom.dir/src/ftxui/dom/automerge.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/selection_style.cpp.o -c /src/ftxui/src/ftxui/dom/selection_style.cpp",
+  "file": "/src/ftxui/src/ftxui/dom/selection_style.cpp",
+  "output": "ftxui/CMakeFiles/dom.dir/src/ftxui/dom/selection_style.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/blink.cpp.o -c /src/ftxui/src/ftxui/dom/blink.cpp",
+  "file": "/src/ftxui/src/ftxui/dom/blink.cpp",
+  "output": "ftxui/CMakeFiles/dom.dir/src/ftxui/dom/blink.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/bold.cpp.o -c /src/ftxui/src/ftxui/dom/bold.cpp",
+  "file": "/src/ftxui/src/ftxui/dom/bold.cpp",
+  "output": "ftxui/CMakeFiles/dom.dir/src/ftxui/dom/bold.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/border.cpp.o -c /src/ftxui/src/ftxui/dom/border.cpp",
+  "file": "/src/ftxui/src/ftxui/dom/border.cpp",
+  "output": "ftxui/CMakeFiles/dom.dir/src/ftxui/dom/border.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/box_helper.cpp.o -c /src/ftxui/src/ftxui/dom/box_helper.cpp",
+  "file": "/src/ftxui/src/ftxui/dom/box_helper.cpp",
+  "output": "ftxui/CMakeFiles/dom.dir/src/ftxui/dom/box_helper.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/canvas.cpp.o -c /src/ftxui/src/ftxui/dom/canvas.cpp",
+  "file": "/src/ftxui/src/ftxui/dom/canvas.cpp",
+  "output": "ftxui/CMakeFiles/dom.dir/src/ftxui/dom/canvas.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/clear_under.cpp.o -c /src/ftxui/src/ftxui/dom/clear_under.cpp",
+  "file": "/src/ftxui/src/ftxui/dom/clear_under.cpp",
+  "output": "ftxui/CMakeFiles/dom.dir/src/ftxui/dom/clear_under.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/color.cpp.o -c /src/ftxui/src/ftxui/dom/color.cpp",
+  "file": "/src/ftxui/src/ftxui/dom/color.cpp",
+  "output": "ftxui/CMakeFiles/dom.dir/src/ftxui/dom/color.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/composite_decorator.cpp.o -c /src/ftxui/src/ftxui/dom/composite_decorator.cpp",
+  "file": "/src/ftxui/src/ftxui/dom/composite_decorator.cpp",
+  "output": "ftxui/CMakeFiles/dom.dir/src/ftxui/dom/composite_decorator.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/dbox.cpp.o -c /src/ftxui/src/ftxui/dom/dbox.cpp",
+  "file": "/src/ftxui/src/ftxui/dom/dbox.cpp",
+  "output": "ftxui/CMakeFiles/dom.dir/src/ftxui/dom/dbox.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/dim.cpp.o -c /src/ftxui/src/ftxui/dom/dim.cpp",
+  "file": "/src/ftxui/src/ftxui/dom/dim.cpp",
+  "output": "ftxui/CMakeFiles/dom.dir/src/ftxui/dom/dim.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/flex.cpp.o -c /src/ftxui/src/ftxui/dom/flex.cpp",
+  "file": "/src/ftxui/src/ftxui/dom/flex.cpp",
+  "output": "ftxui/CMakeFiles/dom.dir/src/ftxui/dom/flex.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/flexbox.cpp.o -c /src/ftxui/src/ftxui/dom/flexbox.cpp",
+  "file": "/src/ftxui/src/ftxui/dom/flexbox.cpp",
+  "output": "ftxui/CMakeFiles/dom.dir/src/ftxui/dom/flexbox.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/flexbox_config.cpp.o -c /src/ftxui/src/ftxui/dom/flexbox_config.cpp",
+  "file": "/src/ftxui/src/ftxui/dom/flexbox_config.cpp",
+  "output": "ftxui/CMakeFiles/dom.dir/src/ftxui/dom/flexbox_config.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/flexbox_helper.cpp.o -c /src/ftxui/src/ftxui/dom/flexbox_helper.cpp",
+  "file": "/src/ftxui/src/ftxui/dom/flexbox_helper.cpp",
+  "output": "ftxui/CMakeFiles/dom.dir/src/ftxui/dom/flexbox_helper.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/focus.cpp.o -c /src/ftxui/src/ftxui/dom/focus.cpp",
+  "file": "/src/ftxui/src/ftxui/dom/focus.cpp",
+  "output": "ftxui/CMakeFiles/dom.dir/src/ftxui/dom/focus.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/frame.cpp.o -c /src/ftxui/src/ftxui/dom/frame.cpp",
+  "file": "/src/ftxui/src/ftxui/dom/frame.cpp",
+  "output": "ftxui/CMakeFiles/dom.dir/src/ftxui/dom/frame.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/gauge.cpp.o -c /src/ftxui/src/ftxui/dom/gauge.cpp",
+  "file": "/src/ftxui/src/ftxui/dom/gauge.cpp",
+  "output": "ftxui/CMakeFiles/dom.dir/src/ftxui/dom/gauge.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/graph.cpp.o -c /src/ftxui/src/ftxui/dom/graph.cpp",
+  "file": "/src/ftxui/src/ftxui/dom/graph.cpp",
+  "output": "ftxui/CMakeFiles/dom.dir/src/ftxui/dom/graph.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/gridbox.cpp.o -c /src/ftxui/src/ftxui/dom/gridbox.cpp",
+  "file": "/src/ftxui/src/ftxui/dom/gridbox.cpp",
+  "output": "ftxui/CMakeFiles/dom.dir/src/ftxui/dom/gridbox.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/hbox.cpp.o -c /src/ftxui/src/ftxui/dom/hbox.cpp",
+  "file": "/src/ftxui/src/ftxui/dom/hbox.cpp",
+  "output": "ftxui/CMakeFiles/dom.dir/src/ftxui/dom/hbox.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/hyperlink.cpp.o -c /src/ftxui/src/ftxui/dom/hyperlink.cpp",
+  "file": "/src/ftxui/src/ftxui/dom/hyperlink.cpp",
+  "output": "ftxui/CMakeFiles/dom.dir/src/ftxui/dom/hyperlink.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/inverted.cpp.o -c /src/ftxui/src/ftxui/dom/inverted.cpp",
+  "file": "/src/ftxui/src/ftxui/dom/inverted.cpp",
+  "output": "ftxui/CMakeFiles/dom.dir/src/ftxui/dom/inverted.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/italic.cpp.o -c /src/ftxui/src/ftxui/dom/italic.cpp",
+  "file": "/src/ftxui/src/ftxui/dom/italic.cpp",
+  "output": "ftxui/CMakeFiles/dom.dir/src/ftxui/dom/italic.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/linear_gradient.cpp.o -c /src/ftxui/src/ftxui/dom/linear_gradient.cpp",
+  "file": "/src/ftxui/src/ftxui/dom/linear_gradient.cpp",
+  "output": "ftxui/CMakeFiles/dom.dir/src/ftxui/dom/linear_gradient.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/node.cpp.o -c /src/ftxui/src/ftxui/dom/node.cpp",
+  "file": "/src/ftxui/src/ftxui/dom/node.cpp",
+  "output": "ftxui/CMakeFiles/dom.dir/src/ftxui/dom/node.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/node_decorator.cpp.o -c /src/ftxui/src/ftxui/dom/node_decorator.cpp",
+  "file": "/src/ftxui/src/ftxui/dom/node_decorator.cpp",
+  "output": "ftxui/CMakeFiles/dom.dir/src/ftxui/dom/node_decorator.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/paragraph.cpp.o -c /src/ftxui/src/ftxui/dom/paragraph.cpp",
+  "file": "/src/ftxui/src/ftxui/dom/paragraph.cpp",
+  "output": "ftxui/CMakeFiles/dom.dir/src/ftxui/dom/paragraph.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/reflect.cpp.o -c /src/ftxui/src/ftxui/dom/reflect.cpp",
+  "file": "/src/ftxui/src/ftxui/dom/reflect.cpp",
+  "output": "ftxui/CMakeFiles/dom.dir/src/ftxui/dom/reflect.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/scroll_indicator.cpp.o -c /src/ftxui/src/ftxui/dom/scroll_indicator.cpp",
+  "file": "/src/ftxui/src/ftxui/dom/scroll_indicator.cpp",
+  "output": "ftxui/CMakeFiles/dom.dir/src/ftxui/dom/scroll_indicator.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/selection.cpp.o -c /src/ftxui/src/ftxui/dom/selection.cpp",
+  "file": "/src/ftxui/src/ftxui/dom/selection.cpp",
+  "output": "ftxui/CMakeFiles/dom.dir/src/ftxui/dom/selection.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/separator.cpp.o -c /src/ftxui/src/ftxui/dom/separator.cpp",
+  "file": "/src/ftxui/src/ftxui/dom/separator.cpp",
+  "output": "ftxui/CMakeFiles/dom.dir/src/ftxui/dom/separator.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/size.cpp.o -c /src/ftxui/src/ftxui/dom/size.cpp",
+  "file": "/src/ftxui/src/ftxui/dom/size.cpp",
+  "output": "ftxui/CMakeFiles/dom.dir/src/ftxui/dom/size.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/spinner.cpp.o -c /src/ftxui/src/ftxui/dom/spinner.cpp",
+  "file": "/src/ftxui/src/ftxui/dom/spinner.cpp",
+  "output": "ftxui/CMakeFiles/dom.dir/src/ftxui/dom/spinner.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/strikethrough.cpp.o -c /src/ftxui/src/ftxui/dom/strikethrough.cpp",
+  "file": "/src/ftxui/src/ftxui/dom/strikethrough.cpp",
+  "output": "ftxui/CMakeFiles/dom.dir/src/ftxui/dom/strikethrough.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/table.cpp.o -c /src/ftxui/src/ftxui/dom/table.cpp",
+  "file": "/src/ftxui/src/ftxui/dom/table.cpp",
+  "output": "ftxui/CMakeFiles/dom.dir/src/ftxui/dom/table.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/text.cpp.o -c /src/ftxui/src/ftxui/dom/text.cpp",
+  "file": "/src/ftxui/src/ftxui/dom/text.cpp",
+  "output": "ftxui/CMakeFiles/dom.dir/src/ftxui/dom/text.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/underlined.cpp.o -c /src/ftxui/src/ftxui/dom/underlined.cpp",
+  "file": "/src/ftxui/src/ftxui/dom/underlined.cpp",
+  "output": "ftxui/CMakeFiles/dom.dir/src/ftxui/dom/underlined.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/underlined_double.cpp.o -c /src/ftxui/src/ftxui/dom/underlined_double.cpp",
+  "file": "/src/ftxui/src/ftxui/dom/underlined_double.cpp",
+  "output": "ftxui/CMakeFiles/dom.dir/src/ftxui/dom/underlined_double.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/util.cpp.o -c /src/ftxui/src/ftxui/dom/util.cpp",
+  "file": "/src/ftxui/src/ftxui/dom/util.cpp",
+  "output": "ftxui/CMakeFiles/dom.dir/src/ftxui/dom/util.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/vbox.cpp.o -c /src/ftxui/src/ftxui/dom/vbox.cpp",
+  "file": "/src/ftxui/src/ftxui/dom/vbox.cpp",
+  "output": "ftxui/CMakeFiles/dom.dir/src/ftxui/dom/vbox.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/animation.cpp.o -c /src/ftxui/src/ftxui/component/animation.cpp",
+  "file": "/src/ftxui/src/ftxui/component/animation.cpp",
+  "output": "ftxui/CMakeFiles/component.dir/src/ftxui/component/animation.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/button.cpp.o -c /src/ftxui/src/ftxui/component/button.cpp",
+  "file": "/src/ftxui/src/ftxui/component/button.cpp",
+  "output": "ftxui/CMakeFiles/component.dir/src/ftxui/component/button.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/catch_event.cpp.o -c /src/ftxui/src/ftxui/component/catch_event.cpp",
+  "file": "/src/ftxui/src/ftxui/component/catch_event.cpp",
+  "output": "ftxui/CMakeFiles/component.dir/src/ftxui/component/catch_event.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/checkbox.cpp.o -c /src/ftxui/src/ftxui/component/checkbox.cpp",
+  "file": "/src/ftxui/src/ftxui/component/checkbox.cpp",
+  "output": "ftxui/CMakeFiles/component.dir/src/ftxui/component/checkbox.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/collapsible.cpp.o -c /src/ftxui/src/ftxui/component/collapsible.cpp",
+  "file": "/src/ftxui/src/ftxui/component/collapsible.cpp",
+  "output": "ftxui/CMakeFiles/component.dir/src/ftxui/component/collapsible.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/component.cpp.o -c /src/ftxui/src/ftxui/component/component.cpp",
+  "file": "/src/ftxui/src/ftxui/component/component.cpp",
+  "output": "ftxui/CMakeFiles/component.dir/src/ftxui/component/component.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/component_options.cpp.o -c /src/ftxui/src/ftxui/component/component_options.cpp",
+  "file": "/src/ftxui/src/ftxui/component/component_options.cpp",
+  "output": "ftxui/CMakeFiles/component.dir/src/ftxui/component/component_options.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/container.cpp.o -c /src/ftxui/src/ftxui/component/container.cpp",
+  "file": "/src/ftxui/src/ftxui/component/container.cpp",
+  "output": "ftxui/CMakeFiles/component.dir/src/ftxui/component/container.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/dropdown.cpp.o -c /src/ftxui/src/ftxui/component/dropdown.cpp",
+  "file": "/src/ftxui/src/ftxui/component/dropdown.cpp",
+  "output": "ftxui/CMakeFiles/component.dir/src/ftxui/component/dropdown.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/event.cpp.o -c /src/ftxui/src/ftxui/component/event.cpp",
+  "file": "/src/ftxui/src/ftxui/component/event.cpp",
+  "output": "ftxui/CMakeFiles/component.dir/src/ftxui/component/event.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/hoverable.cpp.o -c /src/ftxui/src/ftxui/component/hoverable.cpp",
+  "file": "/src/ftxui/src/ftxui/component/hoverable.cpp",
+  "output": "ftxui/CMakeFiles/component.dir/src/ftxui/component/hoverable.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/input.cpp.o -c /src/ftxui/src/ftxui/component/input.cpp",
+  "file": "/src/ftxui/src/ftxui/component/input.cpp",
+  "output": "ftxui/CMakeFiles/component.dir/src/ftxui/component/input.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/loop.cpp.o -c /src/ftxui/src/ftxui/component/loop.cpp",
+  "file": "/src/ftxui/src/ftxui/component/loop.cpp",
+  "output": "ftxui/CMakeFiles/component.dir/src/ftxui/component/loop.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/maybe.cpp.o -c /src/ftxui/src/ftxui/component/maybe.cpp",
+  "file": "/src/ftxui/src/ftxui/component/maybe.cpp",
+  "output": "ftxui/CMakeFiles/component.dir/src/ftxui/component/maybe.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/menu.cpp.o -c /src/ftxui/src/ftxui/component/menu.cpp",
+  "file": "/src/ftxui/src/ftxui/component/menu.cpp",
+  "output": "ftxui/CMakeFiles/component.dir/src/ftxui/component/menu.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/modal.cpp.o -c /src/ftxui/src/ftxui/component/modal.cpp",
+  "file": "/src/ftxui/src/ftxui/component/modal.cpp",
+  "output": "ftxui/CMakeFiles/component.dir/src/ftxui/component/modal.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/radiobox.cpp.o -c /src/ftxui/src/ftxui/component/radiobox.cpp",
+  "file": "/src/ftxui/src/ftxui/component/radiobox.cpp",
+  "output": "ftxui/CMakeFiles/component.dir/src/ftxui/component/radiobox.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/renderer.cpp.o -c /src/ftxui/src/ftxui/component/renderer.cpp",
+  "file": "/src/ftxui/src/ftxui/component/renderer.cpp",
+  "output": "ftxui/CMakeFiles/component.dir/src/ftxui/component/renderer.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/resizable_split.cpp.o -c /src/ftxui/src/ftxui/component/resizable_split.cpp",
+  "file": "/src/ftxui/src/ftxui/component/resizable_split.cpp",
+  "output": "ftxui/CMakeFiles/component.dir/src/ftxui/component/resizable_split.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/screen_interactive.cpp.o -c /src/ftxui/src/ftxui/component/screen_interactive.cpp",
+  "file": "/src/ftxui/src/ftxui/component/screen_interactive.cpp",
+  "output": "ftxui/CMakeFiles/component.dir/src/ftxui/component/screen_interactive.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/slider.cpp.o -c /src/ftxui/src/ftxui/component/slider.cpp",
+  "file": "/src/ftxui/src/ftxui/component/slider.cpp",
+  "output": "ftxui/CMakeFiles/component.dir/src/ftxui/component/slider.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/task.cpp.o -c /src/ftxui/src/ftxui/component/task.cpp",
+  "file": "/src/ftxui/src/ftxui/component/task.cpp",
+  "output": "ftxui/CMakeFiles/component.dir/src/ftxui/component/task.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/task_queue.cpp.o -c /src/ftxui/src/ftxui/component/task_queue.cpp",
+  "file": "/src/ftxui/src/ftxui/component/task_queue.cpp",
+  "output": "ftxui/CMakeFiles/component.dir/src/ftxui/component/task_queue.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/task_runner.cpp.o -c /src/ftxui/src/ftxui/component/task_runner.cpp",
+  "file": "/src/ftxui/src/ftxui/component/task_runner.cpp",
+  "output": "ftxui/CMakeFiles/component.dir/src/ftxui/component/task_runner.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/terminal_input_parser.cpp.o -c /src/ftxui/src/ftxui/component/terminal_input_parser.cpp",
+  "file": "/src/ftxui/src/ftxui/component/terminal_input_parser.cpp",
+  "output": "ftxui/CMakeFiles/component.dir/src/ftxui/component/terminal_input_parser.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/util.cpp.o -c /src/ftxui/src/ftxui/component/util.cpp",
+  "file": "/src/ftxui/src/ftxui/component/util.cpp",
+  "output": "ftxui/CMakeFiles/component.dir/src/ftxui/component/util.cpp.o"
+},
+{
+  "directory": "/src/build/ftxui",
+  "command": "/usr/local/bin/c++  -I/src/ftxui/src -isystem /src/ftxui/include -O3 -DNDEBUG -std=c++20 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/window.cpp.o -c /src/ftxui/src/ftxui/component/window.cpp",
+  "file": "/src/ftxui/src/ftxui/component/window.cpp",
+  "output": "ftxui/CMakeFiles/component.dir/src/ftxui/component/window.cpp.o"
+}
+]

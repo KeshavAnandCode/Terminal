@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/keshavanand/Downloads/VSCode/Terminal/content.cpp" "CMakeFiles/portfolio.dir/content.cpp.o" "gcc" "CMakeFiles/portfolio.dir/content.cpp.o.d"
-  "/Users/keshavanand/Downloads/VSCode/Terminal/main.cpp" "CMakeFiles/portfolio.dir/main.cpp.o" "gcc" "CMakeFiles/portfolio.dir/main.cpp.o.d"
+  "/Users/keshavanand/Downloads/Code/Terminal/content.cpp" "CMakeFiles/portfolio.dir/content.cpp.o" "gcc" "CMakeFiles/portfolio.dir/content.cpp.o.d"
+  "/Users/keshavanand/Downloads/Code/Terminal/main.cpp" "CMakeFiles/portfolio.dir/main.cpp.o" "gcc" "CMakeFiles/portfolio.dir/main.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

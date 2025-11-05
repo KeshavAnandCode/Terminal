@@ -2,7 +2,7 @@
 setlocal
 
 :: Download the Windows executable
-powershell -Command "Invoke-WebRequest -Uri 'https://github.com/KeshavAnandCode/Terminal/releases/download/v1.0/portfolio-windows' -OutFile '%TEMP%\\portfolio.exe'"
+powershell -Command "Invoke-WebRequest -Uri 'https://github.com/KeshavAnandCode/Terminal/releases/download/v2.0/portfolio-windows' -OutFile '%TEMP%\\portfolio.exe'"
 
 :: Run the executable
 "%TEMP%\portfolio.exe"

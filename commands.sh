@@ -2,7 +2,7 @@
 
 #macos
 
-cd ~/Downloads/VSCode/Terminal
+cd ~/Downloads/Code/Terminal
 rm -rf macbuild
 mkdir macbuild
 cd macbuild
@@ -13,7 +13,7 @@ make
 
 #Linux
 
-cd ~/Downloads/VSCode/Terminal
+cd ~/Downloads/Code/Terminal
 rm -rf linuxbuild
 mkdir linuxbuild
 cd linuxbuild
@@ -23,20 +23,22 @@ apt-get update && apt-get install -y cmake make
 mkdir -p build && cd build
 cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXE_LINKER_FLAGS='-static' ..
 make
+cd ..
+mv build linuxbuild/
 "
 
 #Linux Test
 
-cd ~/Downloads/VSCode/Terminal
+cd ~/Downloads/Code/Terminal
 
 docker run --rm -v "$(pwd)/linuxbuild":/build -w /build --platform linux/amd64 ubuntu:22.04 bash -c "
 apt-get update && apt-get install -y libstdc++6
-./portfolio
+./build/portfolio
 "
 
 #Windows:
 
-cd ~/Downloads/VSCode/Terminal
+cd ~/Downloads/Code/Terminal
 rm -rf winbuild
 mkdir winbuild
 
@@ -56,7 +58,7 @@ cp portfolio.exe /work/winbuild/
 
 #Windows Test (requires Wine)
 
-cd ~/Downloads/VSCode/Terminal
+cd ~/Downloads/Code/Terminal
 
 docker run --rm -v "$(pwd)/winbuild":/winbuild -w /winbuild --platform linux/amd64 \
   scottyhardy/docker-wine:latest wine64 build/portfolio.exe

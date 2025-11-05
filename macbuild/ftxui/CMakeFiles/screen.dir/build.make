@@ -53,10 +53,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/keshavanand/Downloads/VSCode/Terminal
+CMAKE_SOURCE_DIR = /Users/keshavanand/Downloads/Code/Terminal
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/keshavanand/Downloads/VSCode/Terminal/macbuild
+CMAKE_BINARY_DIR = /Users/keshavanand/Downloads/Code/Terminal/macbuild
 
 # Include any dependencies generated for this target.
 include ftxui/CMakeFiles/screen.dir/depend.make
@@ -73,102 +73,102 @@ ftxui/CMakeFiles/screen.dir/codegen:
 .PHONY : ftxui/CMakeFiles/screen.dir/codegen
 
 ftxui/CMakeFiles/screen.dir/src/ftxui/screen/box.cpp.o: ftxui/CMakeFiles/screen.dir/flags.make
-ftxui/CMakeFiles/screen.dir/src/ftxui/screen/box.cpp.o: /Users/keshavanand/Downloads/VSCode/Terminal/ftxui/src/ftxui/screen/box.cpp
+ftxui/CMakeFiles/screen.dir/src/ftxui/screen/box.cpp.o: /Users/keshavanand/Downloads/Code/Terminal/ftxui/src/ftxui/screen/box.cpp
 ftxui/CMakeFiles/screen.dir/src/ftxui/screen/box.cpp.o: ftxui/CMakeFiles/screen.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/keshavanand/Downloads/VSCode/Terminal/macbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object ftxui/CMakeFiles/screen.dir/src/ftxui/screen/box.cpp.o"
-	cd /Users/keshavanand/Downloads/VSCode/Terminal/macbuild/ftxui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ftxui/CMakeFiles/screen.dir/src/ftxui/screen/box.cpp.o -MF CMakeFiles/screen.dir/src/ftxui/screen/box.cpp.o.d -o CMakeFiles/screen.dir/src/ftxui/screen/box.cpp.o -c /Users/keshavanand/Downloads/VSCode/Terminal/ftxui/src/ftxui/screen/box.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/keshavanand/Downloads/Code/Terminal/macbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object ftxui/CMakeFiles/screen.dir/src/ftxui/screen/box.cpp.o"
+	cd /Users/keshavanand/Downloads/Code/Terminal/macbuild/ftxui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ftxui/CMakeFiles/screen.dir/src/ftxui/screen/box.cpp.o -MF CMakeFiles/screen.dir/src/ftxui/screen/box.cpp.o.d -o CMakeFiles/screen.dir/src/ftxui/screen/box.cpp.o -c /Users/keshavanand/Downloads/Code/Terminal/ftxui/src/ftxui/screen/box.cpp
 
 ftxui/CMakeFiles/screen.dir/src/ftxui/screen/box.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/screen.dir/src/ftxui/screen/box.cpp.i"
-	cd /Users/keshavanand/Downloads/VSCode/Terminal/macbuild/ftxui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/keshavanand/Downloads/VSCode/Terminal/ftxui/src/ftxui/screen/box.cpp > CMakeFiles/screen.dir/src/ftxui/screen/box.cpp.i
+	cd /Users/keshavanand/Downloads/Code/Terminal/macbuild/ftxui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/keshavanand/Downloads/Code/Terminal/ftxui/src/ftxui/screen/box.cpp > CMakeFiles/screen.dir/src/ftxui/screen/box.cpp.i
 
 ftxui/CMakeFiles/screen.dir/src/ftxui/screen/box.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/screen.dir/src/ftxui/screen/box.cpp.s"
-	cd /Users/keshavanand/Downloads/VSCode/Terminal/macbuild/ftxui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/keshavanand/Downloads/VSCode/Terminal/ftxui/src/ftxui/screen/box.cpp -o CMakeFiles/screen.dir/src/ftxui/screen/box.cpp.s
+	cd /Users/keshavanand/Downloads/Code/Terminal/macbuild/ftxui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/keshavanand/Downloads/Code/Terminal/ftxui/src/ftxui/screen/box.cpp -o CMakeFiles/screen.dir/src/ftxui/screen/box.cpp.s
 
 ftxui/CMakeFiles/screen.dir/src/ftxui/screen/color.cpp.o: ftxui/CMakeFiles/screen.dir/flags.make
-ftxui/CMakeFiles/screen.dir/src/ftxui/screen/color.cpp.o: /Users/keshavanand/Downloads/VSCode/Terminal/ftxui/src/ftxui/screen/color.cpp
+ftxui/CMakeFiles/screen.dir/src/ftxui/screen/color.cpp.o: /Users/keshavanand/Downloads/Code/Terminal/ftxui/src/ftxui/screen/color.cpp
 ftxui/CMakeFiles/screen.dir/src/ftxui/screen/color.cpp.o: ftxui/CMakeFiles/screen.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/keshavanand/Downloads/VSCode/Terminal/macbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object ftxui/CMakeFiles/screen.dir/src/ftxui/screen/color.cpp.o"
-	cd /Users/keshavanand/Downloads/VSCode/Terminal/macbuild/ftxui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ftxui/CMakeFiles/screen.dir/src/ftxui/screen/color.cpp.o -MF CMakeFiles/screen.dir/src/ftxui/screen/color.cpp.o.d -o CMakeFiles/screen.dir/src/ftxui/screen/color.cpp.o -c /Users/keshavanand/Downloads/VSCode/Terminal/ftxui/src/ftxui/screen/color.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/keshavanand/Downloads/Code/Terminal/macbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object ftxui/CMakeFiles/screen.dir/src/ftxui/screen/color.cpp.o"
+	cd /Users/keshavanand/Downloads/Code/Terminal/macbuild/ftxui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ftxui/CMakeFiles/screen.dir/src/ftxui/screen/color.cpp.o -MF CMakeFiles/screen.dir/src/ftxui/screen/color.cpp.o.d -o CMakeFiles/screen.dir/src/ftxui/screen/color.cpp.o -c /Users/keshavanand/Downloads/Code/Terminal/ftxui/src/ftxui/screen/color.cpp
 
 ftxui/CMakeFiles/screen.dir/src/ftxui/screen/color.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/screen.dir/src/ftxui/screen/color.cpp.i"
-	cd /Users/keshavanand/Downloads/VSCode/Terminal/macbuild/ftxui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/keshavanand/Downloads/VSCode/Terminal/ftxui/src/ftxui/screen/color.cpp > CMakeFiles/screen.dir/src/ftxui/screen/color.cpp.i
+	cd /Users/keshavanand/Downloads/Code/Terminal/macbuild/ftxui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/keshavanand/Downloads/Code/Terminal/ftxui/src/ftxui/screen/color.cpp > CMakeFiles/screen.dir/src/ftxui/screen/color.cpp.i
 
 ftxui/CMakeFiles/screen.dir/src/ftxui/screen/color.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/screen.dir/src/ftxui/screen/color.cpp.s"
-	cd /Users/keshavanand/Downloads/VSCode/Terminal/macbuild/ftxui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/keshavanand/Downloads/VSCode/Terminal/ftxui/src/ftxui/screen/color.cpp -o CMakeFiles/screen.dir/src/ftxui/screen/color.cpp.s
+	cd /Users/keshavanand/Downloads/Code/Terminal/macbuild/ftxui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/keshavanand/Downloads/Code/Terminal/ftxui/src/ftxui/screen/color.cpp -o CMakeFiles/screen.dir/src/ftxui/screen/color.cpp.s
 
 ftxui/CMakeFiles/screen.dir/src/ftxui/screen/color_info.cpp.o: ftxui/CMakeFiles/screen.dir/flags.make
-ftxui/CMakeFiles/screen.dir/src/ftxui/screen/color_info.cpp.o: /Users/keshavanand/Downloads/VSCode/Terminal/ftxui/src/ftxui/screen/color_info.cpp
+ftxui/CMakeFiles/screen.dir/src/ftxui/screen/color_info.cpp.o: /Users/keshavanand/Downloads/Code/Terminal/ftxui/src/ftxui/screen/color_info.cpp
 ftxui/CMakeFiles/screen.dir/src/ftxui/screen/color_info.cpp.o: ftxui/CMakeFiles/screen.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/keshavanand/Downloads/VSCode/Terminal/macbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object ftxui/CMakeFiles/screen.dir/src/ftxui/screen/color_info.cpp.o"
-	cd /Users/keshavanand/Downloads/VSCode/Terminal/macbuild/ftxui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ftxui/CMakeFiles/screen.dir/src/ftxui/screen/color_info.cpp.o -MF CMakeFiles/screen.dir/src/ftxui/screen/color_info.cpp.o.d -o CMakeFiles/screen.dir/src/ftxui/screen/color_info.cpp.o -c /Users/keshavanand/Downloads/VSCode/Terminal/ftxui/src/ftxui/screen/color_info.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/keshavanand/Downloads/Code/Terminal/macbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object ftxui/CMakeFiles/screen.dir/src/ftxui/screen/color_info.cpp.o"
+	cd /Users/keshavanand/Downloads/Code/Terminal/macbuild/ftxui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ftxui/CMakeFiles/screen.dir/src/ftxui/screen/color_info.cpp.o -MF CMakeFiles/screen.dir/src/ftxui/screen/color_info.cpp.o.d -o CMakeFiles/screen.dir/src/ftxui/screen/color_info.cpp.o -c /Users/keshavanand/Downloads/Code/Terminal/ftxui/src/ftxui/screen/color_info.cpp
 
 ftxui/CMakeFiles/screen.dir/src/ftxui/screen/color_info.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/screen.dir/src/ftxui/screen/color_info.cpp.i"
-	cd /Users/keshavanand/Downloads/VSCode/Terminal/macbuild/ftxui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/keshavanand/Downloads/VSCode/Terminal/ftxui/src/ftxui/screen/color_info.cpp > CMakeFiles/screen.dir/src/ftxui/screen/color_info.cpp.i
+	cd /Users/keshavanand/Downloads/Code/Terminal/macbuild/ftxui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/keshavanand/Downloads/Code/Terminal/ftxui/src/ftxui/screen/color_info.cpp > CMakeFiles/screen.dir/src/ftxui/screen/color_info.cpp.i
 
 ftxui/CMakeFiles/screen.dir/src/ftxui/screen/color_info.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/screen.dir/src/ftxui/screen/color_info.cpp.s"
-	cd /Users/keshavanand/Downloads/VSCode/Terminal/macbuild/ftxui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/keshavanand/Downloads/VSCode/Terminal/ftxui/src/ftxui/screen/color_info.cpp -o CMakeFiles/screen.dir/src/ftxui/screen/color_info.cpp.s
+	cd /Users/keshavanand/Downloads/Code/Terminal/macbuild/ftxui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/keshavanand/Downloads/Code/Terminal/ftxui/src/ftxui/screen/color_info.cpp -o CMakeFiles/screen.dir/src/ftxui/screen/color_info.cpp.s
 
 ftxui/CMakeFiles/screen.dir/src/ftxui/screen/image.cpp.o: ftxui/CMakeFiles/screen.dir/flags.make
-ftxui/CMakeFiles/screen.dir/src/ftxui/screen/image.cpp.o: /Users/keshavanand/Downloads/VSCode/Terminal/ftxui/src/ftxui/screen/image.cpp
+ftxui/CMakeFiles/screen.dir/src/ftxui/screen/image.cpp.o: /Users/keshavanand/Downloads/Code/Terminal/ftxui/src/ftxui/screen/image.cpp
 ftxui/CMakeFiles/screen.dir/src/ftxui/screen/image.cpp.o: ftxui/CMakeFiles/screen.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/keshavanand/Downloads/VSCode/Terminal/macbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object ftxui/CMakeFiles/screen.dir/src/ftxui/screen/image.cpp.o"
-	cd /Users/keshavanand/Downloads/VSCode/Terminal/macbuild/ftxui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ftxui/CMakeFiles/screen.dir/src/ftxui/screen/image.cpp.o -MF CMakeFiles/screen.dir/src/ftxui/screen/image.cpp.o.d -o CMakeFiles/screen.dir/src/ftxui/screen/image.cpp.o -c /Users/keshavanand/Downloads/VSCode/Terminal/ftxui/src/ftxui/screen/image.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/keshavanand/Downloads/Code/Terminal/macbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object ftxui/CMakeFiles/screen.dir/src/ftxui/screen/image.cpp.o"
+	cd /Users/keshavanand/Downloads/Code/Terminal/macbuild/ftxui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ftxui/CMakeFiles/screen.dir/src/ftxui/screen/image.cpp.o -MF CMakeFiles/screen.dir/src/ftxui/screen/image.cpp.o.d -o CMakeFiles/screen.dir/src/ftxui/screen/image.cpp.o -c /Users/keshavanand/Downloads/Code/Terminal/ftxui/src/ftxui/screen/image.cpp
 
 ftxui/CMakeFiles/screen.dir/src/ftxui/screen/image.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/screen.dir/src/ftxui/screen/image.cpp.i"
-	cd /Users/keshavanand/Downloads/VSCode/Terminal/macbuild/ftxui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/keshavanand/Downloads/VSCode/Terminal/ftxui/src/ftxui/screen/image.cpp > CMakeFiles/screen.dir/src/ftxui/screen/image.cpp.i
+	cd /Users/keshavanand/Downloads/Code/Terminal/macbuild/ftxui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/keshavanand/Downloads/Code/Terminal/ftxui/src/ftxui/screen/image.cpp > CMakeFiles/screen.dir/src/ftxui/screen/image.cpp.i
 
 ftxui/CMakeFiles/screen.dir/src/ftxui/screen/image.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/screen.dir/src/ftxui/screen/image.cpp.s"
-	cd /Users/keshavanand/Downloads/VSCode/Terminal/macbuild/ftxui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/keshavanand/Downloads/VSCode/Terminal/ftxui/src/ftxui/screen/image.cpp -o CMakeFiles/screen.dir/src/ftxui/screen/image.cpp.s
+	cd /Users/keshavanand/Downloads/Code/Terminal/macbuild/ftxui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/keshavanand/Downloads/Code/Terminal/ftxui/src/ftxui/screen/image.cpp -o CMakeFiles/screen.dir/src/ftxui/screen/image.cpp.s
 
 ftxui/CMakeFiles/screen.dir/src/ftxui/screen/screen.cpp.o: ftxui/CMakeFiles/screen.dir/flags.make
-ftxui/CMakeFiles/screen.dir/src/ftxui/screen/screen.cpp.o: /Users/keshavanand/Downloads/VSCode/Terminal/ftxui/src/ftxui/screen/screen.cpp
+ftxui/CMakeFiles/screen.dir/src/ftxui/screen/screen.cpp.o: /Users/keshavanand/Downloads/Code/Terminal/ftxui/src/ftxui/screen/screen.cpp
 ftxui/CMakeFiles/screen.dir/src/ftxui/screen/screen.cpp.o: ftxui/CMakeFiles/screen.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/keshavanand/Downloads/VSCode/Terminal/macbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object ftxui/CMakeFiles/screen.dir/src/ftxui/screen/screen.cpp.o"
-	cd /Users/keshavanand/Downloads/VSCode/Terminal/macbuild/ftxui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ftxui/CMakeFiles/screen.dir/src/ftxui/screen/screen.cpp.o -MF CMakeFiles/screen.dir/src/ftxui/screen/screen.cpp.o.d -o CMakeFiles/screen.dir/src/ftxui/screen/screen.cpp.o -c /Users/keshavanand/Downloads/VSCode/Terminal/ftxui/src/ftxui/screen/screen.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/keshavanand/Downloads/Code/Terminal/macbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object ftxui/CMakeFiles/screen.dir/src/ftxui/screen/screen.cpp.o"
+	cd /Users/keshavanand/Downloads/Code/Terminal/macbuild/ftxui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ftxui/CMakeFiles/screen.dir/src/ftxui/screen/screen.cpp.o -MF CMakeFiles/screen.dir/src/ftxui/screen/screen.cpp.o.d -o CMakeFiles/screen.dir/src/ftxui/screen/screen.cpp.o -c /Users/keshavanand/Downloads/Code/Terminal/ftxui/src/ftxui/screen/screen.cpp
 
 ftxui/CMakeFiles/screen.dir/src/ftxui/screen/screen.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/screen.dir/src/ftxui/screen/screen.cpp.i"
-	cd /Users/keshavanand/Downloads/VSCode/Terminal/macbuild/ftxui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/keshavanand/Downloads/VSCode/Terminal/ftxui/src/ftxui/screen/screen.cpp > CMakeFiles/screen.dir/src/ftxui/screen/screen.cpp.i
+	cd /Users/keshavanand/Downloads/Code/Terminal/macbuild/ftxui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/keshavanand/Downloads/Code/Terminal/ftxui/src/ftxui/screen/screen.cpp > CMakeFiles/screen.dir/src/ftxui/screen/screen.cpp.i
 
 ftxui/CMakeFiles/screen.dir/src/ftxui/screen/screen.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/screen.dir/src/ftxui/screen/screen.cpp.s"
-	cd /Users/keshavanand/Downloads/VSCode/Terminal/macbuild/ftxui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/keshavanand/Downloads/VSCode/Terminal/ftxui/src/ftxui/screen/screen.cpp -o CMakeFiles/screen.dir/src/ftxui/screen/screen.cpp.s
+	cd /Users/keshavanand/Downloads/Code/Terminal/macbuild/ftxui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/keshavanand/Downloads/Code/Terminal/ftxui/src/ftxui/screen/screen.cpp -o CMakeFiles/screen.dir/src/ftxui/screen/screen.cpp.s
 
 ftxui/CMakeFiles/screen.dir/src/ftxui/screen/string.cpp.o: ftxui/CMakeFiles/screen.dir/flags.make
-ftxui/CMakeFiles/screen.dir/src/ftxui/screen/string.cpp.o: /Users/keshavanand/Downloads/VSCode/Terminal/ftxui/src/ftxui/screen/string.cpp
+ftxui/CMakeFiles/screen.dir/src/ftxui/screen/string.cpp.o: /Users/keshavanand/Downloads/Code/Terminal/ftxui/src/ftxui/screen/string.cpp
 ftxui/CMakeFiles/screen.dir/src/ftxui/screen/string.cpp.o: ftxui/CMakeFiles/screen.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/keshavanand/Downloads/VSCode/Terminal/macbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object ftxui/CMakeFiles/screen.dir/src/ftxui/screen/string.cpp.o"
-	cd /Users/keshavanand/Downloads/VSCode/Terminal/macbuild/ftxui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ftxui/CMakeFiles/screen.dir/src/ftxui/screen/string.cpp.o -MF CMakeFiles/screen.dir/src/ftxui/screen/string.cpp.o.d -o CMakeFiles/screen.dir/src/ftxui/screen/string.cpp.o -c /Users/keshavanand/Downloads/VSCode/Terminal/ftxui/src/ftxui/screen/string.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/keshavanand/Downloads/Code/Terminal/macbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object ftxui/CMakeFiles/screen.dir/src/ftxui/screen/string.cpp.o"
+	cd /Users/keshavanand/Downloads/Code/Terminal/macbuild/ftxui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ftxui/CMakeFiles/screen.dir/src/ftxui/screen/string.cpp.o -MF CMakeFiles/screen.dir/src/ftxui/screen/string.cpp.o.d -o CMakeFiles/screen.dir/src/ftxui/screen/string.cpp.o -c /Users/keshavanand/Downloads/Code/Terminal/ftxui/src/ftxui/screen/string.cpp
 
 ftxui/CMakeFiles/screen.dir/src/ftxui/screen/string.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/screen.dir/src/ftxui/screen/string.cpp.i"
-	cd /Users/keshavanand/Downloads/VSCode/Terminal/macbuild/ftxui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/keshavanand/Downloads/VSCode/Terminal/ftxui/src/ftxui/screen/string.cpp > CMakeFiles/screen.dir/src/ftxui/screen/string.cpp.i
+	cd /Users/keshavanand/Downloads/Code/Terminal/macbuild/ftxui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/keshavanand/Downloads/Code/Terminal/ftxui/src/ftxui/screen/string.cpp > CMakeFiles/screen.dir/src/ftxui/screen/string.cpp.i
 
 ftxui/CMakeFiles/screen.dir/src/ftxui/screen/string.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/screen.dir/src/ftxui/screen/string.cpp.s"
-	cd /Users/keshavanand/Downloads/VSCode/Terminal/macbuild/ftxui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/keshavanand/Downloads/VSCode/Terminal/ftxui/src/ftxui/screen/string.cpp -o CMakeFiles/screen.dir/src/ftxui/screen/string.cpp.s
+	cd /Users/keshavanand/Downloads/Code/Terminal/macbuild/ftxui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/keshavanand/Downloads/Code/Terminal/ftxui/src/ftxui/screen/string.cpp -o CMakeFiles/screen.dir/src/ftxui/screen/string.cpp.s
 
 ftxui/CMakeFiles/screen.dir/src/ftxui/screen/terminal.cpp.o: ftxui/CMakeFiles/screen.dir/flags.make
-ftxui/CMakeFiles/screen.dir/src/ftxui/screen/terminal.cpp.o: /Users/keshavanand/Downloads/VSCode/Terminal/ftxui/src/ftxui/screen/terminal.cpp
+ftxui/CMakeFiles/screen.dir/src/ftxui/screen/terminal.cpp.o: /Users/keshavanand/Downloads/Code/Terminal/ftxui/src/ftxui/screen/terminal.cpp
 ftxui/CMakeFiles/screen.dir/src/ftxui/screen/terminal.cpp.o: ftxui/CMakeFiles/screen.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/keshavanand/Downloads/VSCode/Terminal/macbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object ftxui/CMakeFiles/screen.dir/src/ftxui/screen/terminal.cpp.o"
-	cd /Users/keshavanand/Downloads/VSCode/Terminal/macbuild/ftxui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ftxui/CMakeFiles/screen.dir/src/ftxui/screen/terminal.cpp.o -MF CMakeFiles/screen.dir/src/ftxui/screen/terminal.cpp.o.d -o CMakeFiles/screen.dir/src/ftxui/screen/terminal.cpp.o -c /Users/keshavanand/Downloads/VSCode/Terminal/ftxui/src/ftxui/screen/terminal.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/keshavanand/Downloads/Code/Terminal/macbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object ftxui/CMakeFiles/screen.dir/src/ftxui/screen/terminal.cpp.o"
+	cd /Users/keshavanand/Downloads/Code/Terminal/macbuild/ftxui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ftxui/CMakeFiles/screen.dir/src/ftxui/screen/terminal.cpp.o -MF CMakeFiles/screen.dir/src/ftxui/screen/terminal.cpp.o.d -o CMakeFiles/screen.dir/src/ftxui/screen/terminal.cpp.o -c /Users/keshavanand/Downloads/Code/Terminal/ftxui/src/ftxui/screen/terminal.cpp
 
 ftxui/CMakeFiles/screen.dir/src/ftxui/screen/terminal.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/screen.dir/src/ftxui/screen/terminal.cpp.i"
-	cd /Users/keshavanand/Downloads/VSCode/Terminal/macbuild/ftxui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/keshavanand/Downloads/VSCode/Terminal/ftxui/src/ftxui/screen/terminal.cpp > CMakeFiles/screen.dir/src/ftxui/screen/terminal.cpp.i
+	cd /Users/keshavanand/Downloads/Code/Terminal/macbuild/ftxui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/keshavanand/Downloads/Code/Terminal/ftxui/src/ftxui/screen/terminal.cpp > CMakeFiles/screen.dir/src/ftxui/screen/terminal.cpp.i
 
 ftxui/CMakeFiles/screen.dir/src/ftxui/screen/terminal.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/screen.dir/src/ftxui/screen/terminal.cpp.s"
-	cd /Users/keshavanand/Downloads/VSCode/Terminal/macbuild/ftxui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/keshavanand/Downloads/VSCode/Terminal/ftxui/src/ftxui/screen/terminal.cpp -o CMakeFiles/screen.dir/src/ftxui/screen/terminal.cpp.s
+	cd /Users/keshavanand/Downloads/Code/Terminal/macbuild/ftxui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/keshavanand/Downloads/Code/Terminal/ftxui/src/ftxui/screen/terminal.cpp -o CMakeFiles/screen.dir/src/ftxui/screen/terminal.cpp.s
 
 # Object files for target screen
 screen_OBJECTS = \
@@ -192,19 +192,19 @@ ftxui/libftxui-screen.a: ftxui/CMakeFiles/screen.dir/src/ftxui/screen/string.cpp
 ftxui/libftxui-screen.a: ftxui/CMakeFiles/screen.dir/src/ftxui/screen/terminal.cpp.o
 ftxui/libftxui-screen.a: ftxui/CMakeFiles/screen.dir/build.make
 ftxui/libftxui-screen.a: ftxui/CMakeFiles/screen.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/keshavanand/Downloads/VSCode/Terminal/macbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libftxui-screen.a"
-	cd /Users/keshavanand/Downloads/VSCode/Terminal/macbuild/ftxui && $(CMAKE_COMMAND) -P CMakeFiles/screen.dir/cmake_clean_target.cmake
-	cd /Users/keshavanand/Downloads/VSCode/Terminal/macbuild/ftxui && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/screen.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/keshavanand/Downloads/Code/Terminal/macbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libftxui-screen.a"
+	cd /Users/keshavanand/Downloads/Code/Terminal/macbuild/ftxui && $(CMAKE_COMMAND) -P CMakeFiles/screen.dir/cmake_clean_target.cmake
+	cd /Users/keshavanand/Downloads/Code/Terminal/macbuild/ftxui && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/screen.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 ftxui/CMakeFiles/screen.dir/build: ftxui/libftxui-screen.a
 .PHONY : ftxui/CMakeFiles/screen.dir/build
 
 ftxui/CMakeFiles/screen.dir/clean:
-	cd /Users/keshavanand/Downloads/VSCode/Terminal/macbuild/ftxui && $(CMAKE_COMMAND) -P CMakeFiles/screen.dir/cmake_clean.cmake
+	cd /Users/keshavanand/Downloads/Code/Terminal/macbuild/ftxui && $(CMAKE_COMMAND) -P CMakeFiles/screen.dir/cmake_clean.cmake
 .PHONY : ftxui/CMakeFiles/screen.dir/clean
 
 ftxui/CMakeFiles/screen.dir/depend:
-	cd /Users/keshavanand/Downloads/VSCode/Terminal/macbuild && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/keshavanand/Downloads/VSCode/Terminal /Users/keshavanand/Downloads/VSCode/Terminal/ftxui /Users/keshavanand/Downloads/VSCode/Terminal/macbuild /Users/keshavanand/Downloads/VSCode/Terminal/macbuild/ftxui /Users/keshavanand/Downloads/VSCode/Terminal/macbuild/ftxui/CMakeFiles/screen.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/keshavanand/Downloads/Code/Terminal/macbuild && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/keshavanand/Downloads/Code/Terminal /Users/keshavanand/Downloads/Code/Terminal/ftxui /Users/keshavanand/Downloads/Code/Terminal/macbuild /Users/keshavanand/Downloads/Code/Terminal/macbuild/ftxui /Users/keshavanand/Downloads/Code/Terminal/macbuild/ftxui/CMakeFiles/screen.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : ftxui/CMakeFiles/screen.dir/depend
 

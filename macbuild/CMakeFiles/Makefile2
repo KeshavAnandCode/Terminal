@@ -54,10 +54,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/keshavanand/Downloads/VSCode/Terminal
+CMAKE_SOURCE_DIR = /Users/keshavanand/Downloads/Code/Terminal
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/keshavanand/Downloads/VSCode/Terminal/macbuild
+CMAKE_BINARY_DIR = /Users/keshavanand/Downloads/Code/Terminal/macbuild
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -160,14 +160,14 @@ CMakeFiles/portfolio.dir/all: ftxui/CMakeFiles/dom.dir/all
 CMakeFiles/portfolio.dir/all: ftxui/CMakeFiles/component.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/portfolio.dir/build.make CMakeFiles/portfolio.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/portfolio.dir/build.make CMakeFiles/portfolio.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/keshavanand/Downloads/VSCode/Terminal/macbuild/CMakeFiles --progress-num=72,73,74 "Built target portfolio"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/keshavanand/Downloads/Code/Terminal/macbuild/CMakeFiles --progress-num=72,73,74 "Built target portfolio"
 .PHONY : CMakeFiles/portfolio.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/portfolio.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/keshavanand/Downloads/VSCode/Terminal/macbuild/CMakeFiles 82
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/keshavanand/Downloads/Code/Terminal/macbuild/CMakeFiles 82
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/portfolio.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/keshavanand/Downloads/VSCode/Terminal/macbuild/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/keshavanand/Downloads/Code/Terminal/macbuild/CMakeFiles 0
 .PHONY : CMakeFiles/portfolio.dir/rule
 
 # Convenience name for target.
@@ -177,7 +177,7 @@ portfolio: CMakeFiles/portfolio.dir/rule
 # codegen rule for target.
 CMakeFiles/portfolio.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/portfolio.dir/build.make CMakeFiles/portfolio.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/keshavanand/Downloads/VSCode/Terminal/macbuild/CMakeFiles --progress-num=72,73,74 "Finished codegen for target portfolio"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/keshavanand/Downloads/Code/Terminal/macbuild/CMakeFiles --progress-num=72,73,74 "Finished codegen for target portfolio"
 .PHONY : CMakeFiles/portfolio.dir/codegen
 
 # clean rule for target.
@@ -192,14 +192,14 @@ CMakeFiles/portfolio.dir/clean:
 ftxui/CMakeFiles/screen.dir/all:
 	$(MAKE) $(MAKESILENT) -f ftxui/CMakeFiles/screen.dir/build.make ftxui/CMakeFiles/screen.dir/depend
 	$(MAKE) $(MAKESILENT) -f ftxui/CMakeFiles/screen.dir/build.make ftxui/CMakeFiles/screen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/keshavanand/Downloads/VSCode/Terminal/macbuild/CMakeFiles --progress-num=75,76,77,78,79,80,81,82 "Built target screen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/keshavanand/Downloads/Code/Terminal/macbuild/CMakeFiles --progress-num=75,76,77,78,79,80,81,82 "Built target screen"
 .PHONY : ftxui/CMakeFiles/screen.dir/all
 
 # Build rule for subdir invocation for target.
 ftxui/CMakeFiles/screen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/keshavanand/Downloads/VSCode/Terminal/macbuild/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/keshavanand/Downloads/Code/Terminal/macbuild/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ftxui/CMakeFiles/screen.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/keshavanand/Downloads/VSCode/Terminal/macbuild/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/keshavanand/Downloads/Code/Terminal/macbuild/CMakeFiles 0
 .PHONY : ftxui/CMakeFiles/screen.dir/rule
 
 # Convenience name for target.
@@ -209,7 +209,7 @@ screen: ftxui/CMakeFiles/screen.dir/rule
 # codegen rule for target.
 ftxui/CMakeFiles/screen.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f ftxui/CMakeFiles/screen.dir/build.make ftxui/CMakeFiles/screen.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/keshavanand/Downloads/VSCode/Terminal/macbuild/CMakeFiles --progress-num=75,76,77,78,79,80,81,82 "Finished codegen for target screen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/keshavanand/Downloads/Code/Terminal/macbuild/CMakeFiles --progress-num=75,76,77,78,79,80,81,82 "Finished codegen for target screen"
 .PHONY : ftxui/CMakeFiles/screen.dir/codegen
 
 # clean rule for target.
@@ -224,14 +224,14 @@ ftxui/CMakeFiles/screen.dir/clean:
 ftxui/CMakeFiles/dom.dir/all: ftxui/CMakeFiles/screen.dir/all
 	$(MAKE) $(MAKESILENT) -f ftxui/CMakeFiles/dom.dir/build.make ftxui/CMakeFiles/dom.dir/depend
 	$(MAKE) $(MAKESILENT) -f ftxui/CMakeFiles/dom.dir/build.make ftxui/CMakeFiles/dom.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/keshavanand/Downloads/VSCode/Terminal/macbuild/CMakeFiles --progress-num=29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71 "Built target dom"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/keshavanand/Downloads/Code/Terminal/macbuild/CMakeFiles --progress-num=29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71 "Built target dom"
 .PHONY : ftxui/CMakeFiles/dom.dir/all
 
 # Build rule for subdir invocation for target.
 ftxui/CMakeFiles/dom.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/keshavanand/Downloads/VSCode/Terminal/macbuild/CMakeFiles 51
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/keshavanand/Downloads/Code/Terminal/macbuild/CMakeFiles 51
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ftxui/CMakeFiles/dom.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/keshavanand/Downloads/VSCode/Terminal/macbuild/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/keshavanand/Downloads/Code/Terminal/macbuild/CMakeFiles 0
 .PHONY : ftxui/CMakeFiles/dom.dir/rule
 
 # Convenience name for target.
@@ -241,7 +241,7 @@ dom: ftxui/CMakeFiles/dom.dir/rule
 # codegen rule for target.
 ftxui/CMakeFiles/dom.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f ftxui/CMakeFiles/dom.dir/build.make ftxui/CMakeFiles/dom.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/keshavanand/Downloads/VSCode/Terminal/macbuild/CMakeFiles --progress-num=29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71 "Finished codegen for target dom"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/keshavanand/Downloads/Code/Terminal/macbuild/CMakeFiles --progress-num=29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71 "Finished codegen for target dom"
 .PHONY : ftxui/CMakeFiles/dom.dir/codegen
 
 # clean rule for target.
@@ -257,14 +257,14 @@ ftxui/CMakeFiles/component.dir/all: ftxui/CMakeFiles/screen.dir/all
 ftxui/CMakeFiles/component.dir/all: ftxui/CMakeFiles/dom.dir/all
 	$(MAKE) $(MAKESILENT) -f ftxui/CMakeFiles/component.dir/build.make ftxui/CMakeFiles/component.dir/depend
 	$(MAKE) $(MAKESILENT) -f ftxui/CMakeFiles/component.dir/build.make ftxui/CMakeFiles/component.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/keshavanand/Downloads/VSCode/Terminal/macbuild/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28 "Built target component"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/keshavanand/Downloads/Code/Terminal/macbuild/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28 "Built target component"
 .PHONY : ftxui/CMakeFiles/component.dir/all
 
 # Build rule for subdir invocation for target.
 ftxui/CMakeFiles/component.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/keshavanand/Downloads/VSCode/Terminal/macbuild/CMakeFiles 79
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/keshavanand/Downloads/Code/Terminal/macbuild/CMakeFiles 79
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ftxui/CMakeFiles/component.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/keshavanand/Downloads/VSCode/Terminal/macbuild/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/keshavanand/Downloads/Code/Terminal/macbuild/CMakeFiles 0
 .PHONY : ftxui/CMakeFiles/component.dir/rule
 
 # Convenience name for target.
@@ -274,7 +274,7 @@ component: ftxui/CMakeFiles/component.dir/rule
 # codegen rule for target.
 ftxui/CMakeFiles/component.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f ftxui/CMakeFiles/component.dir/build.make ftxui/CMakeFiles/component.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/keshavanand/Downloads/VSCode/Terminal/macbuild/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28 "Finished codegen for target component"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/keshavanand/Downloads/Code/Terminal/macbuild/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28 "Finished codegen for target component"
 .PHONY : ftxui/CMakeFiles/component.dir/codegen
 
 # clean rule for target.

@@ -53,10 +53,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/keshavanand/Downloads/VSCode/Terminal
+CMAKE_SOURCE_DIR = /Users/keshavanand/Downloads/Code/Terminal
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/keshavanand/Downloads/VSCode/Terminal/macbuild
+CMAKE_BINARY_DIR = /Users/keshavanand/Downloads/Code/Terminal/macbuild
 
 # Include any dependencies generated for this target.
 include CMakeFiles/portfolio.dir/depend.make
@@ -73,32 +73,32 @@ CMakeFiles/portfolio.dir/codegen:
 .PHONY : CMakeFiles/portfolio.dir/codegen
 
 CMakeFiles/portfolio.dir/main.cpp.o: CMakeFiles/portfolio.dir/flags.make
-CMakeFiles/portfolio.dir/main.cpp.o: /Users/keshavanand/Downloads/VSCode/Terminal/main.cpp
+CMakeFiles/portfolio.dir/main.cpp.o: /Users/keshavanand/Downloads/Code/Terminal/main.cpp
 CMakeFiles/portfolio.dir/main.cpp.o: CMakeFiles/portfolio.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/keshavanand/Downloads/VSCode/Terminal/macbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/portfolio.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/portfolio.dir/main.cpp.o -MF CMakeFiles/portfolio.dir/main.cpp.o.d -o CMakeFiles/portfolio.dir/main.cpp.o -c /Users/keshavanand/Downloads/VSCode/Terminal/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/keshavanand/Downloads/Code/Terminal/macbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/portfolio.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/portfolio.dir/main.cpp.o -MF CMakeFiles/portfolio.dir/main.cpp.o.d -o CMakeFiles/portfolio.dir/main.cpp.o -c /Users/keshavanand/Downloads/Code/Terminal/main.cpp
 
 CMakeFiles/portfolio.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/portfolio.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/keshavanand/Downloads/VSCode/Terminal/main.cpp > CMakeFiles/portfolio.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/keshavanand/Downloads/Code/Terminal/main.cpp > CMakeFiles/portfolio.dir/main.cpp.i
 
 CMakeFiles/portfolio.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/portfolio.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/keshavanand/Downloads/VSCode/Terminal/main.cpp -o CMakeFiles/portfolio.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/keshavanand/Downloads/Code/Terminal/main.cpp -o CMakeFiles/portfolio.dir/main.cpp.s
 
 CMakeFiles/portfolio.dir/content.cpp.o: CMakeFiles/portfolio.dir/flags.make
-CMakeFiles/portfolio.dir/content.cpp.o: /Users/keshavanand/Downloads/VSCode/Terminal/content.cpp
+CMakeFiles/portfolio.dir/content.cpp.o: /Users/keshavanand/Downloads/Code/Terminal/content.cpp
 CMakeFiles/portfolio.dir/content.cpp.o: CMakeFiles/portfolio.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/keshavanand/Downloads/VSCode/Terminal/macbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/portfolio.dir/content.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/portfolio.dir/content.cpp.o -MF CMakeFiles/portfolio.dir/content.cpp.o.d -o CMakeFiles/portfolio.dir/content.cpp.o -c /Users/keshavanand/Downloads/VSCode/Terminal/content.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/keshavanand/Downloads/Code/Terminal/macbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/portfolio.dir/content.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/portfolio.dir/content.cpp.o -MF CMakeFiles/portfolio.dir/content.cpp.o.d -o CMakeFiles/portfolio.dir/content.cpp.o -c /Users/keshavanand/Downloads/Code/Terminal/content.cpp
 
 CMakeFiles/portfolio.dir/content.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/portfolio.dir/content.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/keshavanand/Downloads/VSCode/Terminal/content.cpp > CMakeFiles/portfolio.dir/content.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/keshavanand/Downloads/Code/Terminal/content.cpp > CMakeFiles/portfolio.dir/content.cpp.i
 
 CMakeFiles/portfolio.dir/content.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/portfolio.dir/content.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/keshavanand/Downloads/VSCode/Terminal/content.cpp -o CMakeFiles/portfolio.dir/content.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/keshavanand/Downloads/Code/Terminal/content.cpp -o CMakeFiles/portfolio.dir/content.cpp.s
 
 # Object files for target portfolio
 portfolio_OBJECTS = \
@@ -117,7 +117,7 @@ portfolio: ftxui/libftxui-component.a
 portfolio: ftxui/libftxui-dom.a
 portfolio: ftxui/libftxui-screen.a
 portfolio: CMakeFiles/portfolio.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/keshavanand/Downloads/VSCode/Terminal/macbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable portfolio"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/keshavanand/Downloads/Code/Terminal/macbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable portfolio"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/portfolio.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -129,6 +129,6 @@ CMakeFiles/portfolio.dir/clean:
 .PHONY : CMakeFiles/portfolio.dir/clean
 
 CMakeFiles/portfolio.dir/depend:
-	cd /Users/keshavanand/Downloads/VSCode/Terminal/macbuild && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/keshavanand/Downloads/VSCode/Terminal /Users/keshavanand/Downloads/VSCode/Terminal /Users/keshavanand/Downloads/VSCode/Terminal/macbuild /Users/keshavanand/Downloads/VSCode/Terminal/macbuild /Users/keshavanand/Downloads/VSCode/Terminal/macbuild/CMakeFiles/portfolio.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/keshavanand/Downloads/Code/Terminal/macbuild && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/keshavanand/Downloads/Code/Terminal /Users/keshavanand/Downloads/Code/Terminal /Users/keshavanand/Downloads/Code/Terminal/macbuild /Users/keshavanand/Downloads/Code/Terminal/macbuild /Users/keshavanand/Downloads/Code/Terminal/macbuild/CMakeFiles/portfolio.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/portfolio.dir/depend
 
