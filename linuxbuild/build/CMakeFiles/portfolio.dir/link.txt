@@ -1,1 +1,0 @@
-/usr/local/bin/c++ -O3 -DNDEBUG -static -Wl,--dependency-file=CMakeFiles/portfolio.dir/link.d CMakeFiles/portfolio.dir/main.cpp.o CMakeFiles/portfolio.dir/content.cpp.o -o portfolio  ftxui/libftxui-screen.a ftxui/libftxui-dom.a ftxui/libftxui-component.a ftxui/libftxui-dom.a ftxui/libftxui-screen.a

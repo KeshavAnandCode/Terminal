@@ -1,9 +1,0 @@
-prefix="/usr/src/mxe/usr/x86_64-w64-mingw32.static"
-libdir="/usr/src/mxe/usr/x86_64-w64-mingw32.static/lib"
-includedir="/usr/src/mxe/usr/x86_64-w64-mingw32.static/include"
-
-Name: ftxui
-Description: 
-Version: 6.1.9
-Cflags: -I${includedir}
-Libs: -L${libdir} -lftxui-component -lftxui-dom -lftxui-screen
