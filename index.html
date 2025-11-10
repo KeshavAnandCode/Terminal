@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Terminal Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+
+<style>
+ /* --- General Reset & Base --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'JetBrains Mono', monospace;
+  background-color: #1e1e2e; /* Catppuccin Mocha */
+  color: #b5f59b;
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  gap: 14px;
+  padding-bottom: 24px;
+}
+
+
+/* --- Terminal Box --- */
+.terminal-wrapper {
+  background-color: #0b0f0b;
+  border: 2px solid #a6e3a1; /* soft green border */
+  border-radius: 12px;
+  padding: 16px;
+  overflow-x: auto;
+  max-width: 100%;
+  font-size: 1rem;
+  box-shadow: 0 0 12px rgba(166,227,161,0.3);
+}
+
+pre.shell {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+pre.shell code {
+  display: block;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #b5f59b;
+}
+
+.prompt {
+  color: #a6e3a1;
+  margin-right: 6px;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;      /* allow wrapping on small screens */
+  gap: 10px;
+  align-items: flex-end; /* align bottom of elements */
+  width: 100%;
+  justify-content: flex-start; /* avoid pushing button offscreen */
+}
+
+.left-controls {
+  display: flex;
+  flex-direction: column; 
+  flex: 1 1 60%;       /* allow it to shrink */
+  min-width: 120px;    /* small enough for narrow devices */
+}
+
+.right-controls {
+  flex: 0 1 auto;      /* shrink if needed */
+  display: flex;
+  justify-content: flex-start; /* aligns button nicely next to select or below if wrapped */
+  margin-top: 4px;     /* gives small spacing if wrapped */
+}
+
+/* Small devices: stack copy button below select to avoid horizontal scroll */
+@media (max-width: 480px) {
+  .controls {
+    flex-direction: column;   /* stack elements vertically */
+    align-items: stretch;     /* full width for both */
+    gap: 6px;
+  }
+  .right-controls {
+    justify-content: center;  /* center button below select */
+    margin-top: 4px;
+  }
+  .left-controls {
+    flex: 1 1 100%;           /* take full width */
+  }
+}
+
+.left-controls label.select-label {
+  margin-bottom: 4px; /* small margin so button is closer to select */
+}
+
+label.select-label {
+  display: block;
+  color: #a6e3a1;
+  margin-bottom: 4px;
+  font-size: 0.95rem;
+}
+
+select {
+  width: 100%;
+  max-width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  background: #2a2a38;
+  color: #b5f59b;
+  border: 1px solid rgba(166,227,161,0.3);
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: border 0.2s ease-in-out;
+}
+
+select:hover, select:focus {
+  border-color: #b5f59b;
+  outline: none;
+}
+
+.copy-btn {
+  background: #2a2a38;
+  color: #b5f59b;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(166,227,161,0.4);
+  cursor: pointer;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.95rem;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 0 6px rgba(166,227,161,0.2);
+}
+
+.copy-btn:hover {
+  background: #3c3c50;
+  transform: translateY(-1px);
+  box-shadow: 0 0 12px rgba(166,227,161,0.35);
+}
+
+/* --- Instructions --- */
+.instructions {
+  background: #2a2a38;
+  border: 2px solid rgba(166,227,161,0.3);
+  border-radius: 10px;
+  padding: 14px;
+  color: #b5f59b;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  text-align: left;
+  box-shadow: 0 0 8px rgba(166,227,161,0.15);
+}
+
+.instructions strong {
+  color: #a6e3a1;
+}
+
+/* --- Run at Your Own Risk --- */
+.warning {
+  margin-top: 8px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: #ff4c4c;
+  text-shadow: 0 0 6px #ff4c4c;
+  animation: flash 2s infinite;
+}
+
+@keyframes flash {
+  0%, 60%, 100% { opacity: 1; }
+  30%, 90% { opacity: 0.5; }
+}
+
+/* --- How it works section (Catppuccin Mocha vibes) --- */
+.how-toggle button {
+  text-align: left;
+  background: #2a2a38;
+  color: #a6e3a1;
+  border: 1px solid rgba(166,227,161,0.3);
+  padding: 12px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1rem;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 0 6px rgba(166,227,161,0.2);
+}
+
+.how-toggle button:hover {
+  background: #3c3c50;
+  box-shadow: 0 0 12px rgba(166,227,161,0.35);
+}
+
+.how-content {
+  display: none;
+  background: #1e1e2e;
+  color: #b5f59b;
+  padding: 18px;
+  border-radius: 10px;
+  border: 1px solid rgba(166,227,161,0.2);
+  box-shadow: 0 0 8px rgba(166,227,161,0.15);
+  max-height: 60vh;
+  overflow-y: auto;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.how-content div {
+  background: #2a2a38;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 0 10px rgba(166,227,161,0.15);
+  line-height: 1.6;
+}
+
+.how-content ol, .how-content ul {
+  margin-left: 20px;
+  margin-bottom: 8px;
+}
+
+.how-content a {
+  display:inline-block;
+  text-decoration:none;
+  padding:6px 12px;
+  border-radius:6px;
+  background:#a6e3a1;
+  color:#1e1e2e;
+  font-weight:bold;
+  font-family:'JetBrains Mono';
+  transition: all 0.2s ease-in-out;
+}
+
+.how-content a:hover {
+  background:#8bdc91;
+}
+
+/* --- Small Devices --- */
+@media (max-width: 768px) {
+  pre.shell code { font-size: 0.95rem; }
+  select, .copy-btn, .instructions, .how-toggle button { font-size: 0.9rem; padding: 8px 12px; }
+  .terminal-wrapper { padding: 12px; }
+  .how-content { font-size: 0.9rem; padding: 14px; }
+  .how-content div { padding: 14px; }
+}
+
+
+@media (max-width: 620px) {
+  #copyBtn {
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+
+    /* Remove ALL possible horizontal overflow sources */
+  .controls,
+  .left-controls,
+  .right-controls,
+  .terminal-wrapper,
+  select {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Remove leftover flex spacing from button zone */
+  .right-controls {
+    flex: 0 0 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Remove the invisible width reservation for the old button */
+  .controls {
+    justify-content: center !important;
+  }
+
+  /* Ensure dropdown never triggers overflow */
+  select {
+    width: 100% !important;
+  }
+
+  /* Terminal text & spacing */
+  pre.shell code { 
+    font-size: 0.85rem; 
+    line-height: 1.4; 
+  }
+
+  select, 
+  .copy-btn, 
+  .instructions, 
+  .how-toggle button { 
+    font-size: 0.85rem; 
+    padding: 6px 10px; 
+  }
+
+  .terminal-wrapper { 
+    padding: 10px; 
+  }
+
+  /* ✅ FORCE vertical stacking */
+  .controls { 
+    flex-direction: column; 
+    gap: 6px; 
+    width: 100%;
+  }
+
+  /* ✅ SELECT full width */
+  .left-controls { 
+    width: 100%; 
+    justify-content: center; 
+    flex: 1 1 100%;
+    min-width: 0;               /* override your 120px minimum */
+  }
+
+  /* ✅ COPY BUTTON always on its own line and centered */
+  .right-controls { 
+    width: 100%;
+    justify-content: center;
+    flex: 1 1 100%;
+    margin-top: 0;
+  }
+
+  /* ✅ Never cause overflow — always fit in viewport */
+  .copy-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Instructions */
+  .instructions { 
+    font-size: 0.85rem; 
+    padding: 12px; 
+  }
+
+  /* How it works */
+  .how-content { 
+    font-size: 0.85rem; 
+    padding: 12px; 
+    max-height: 50vh; 
+  }
+
+  .how-content div { 
+    padding: 12px; 
+  }
+}
+
+
+</style>
+
+</head>
+
+<body>
+<div class="page">
+
+  <div class="terminal-wrapper">
+    <pre class="shell">
+<code id="cmdline"><span class="prompt">$</span> <span class="command">Detecting your OS...</span></code>
+    </pre>
+  </div>
+
+  <div class="controls">
+    <div class="left-controls">
+      <label class="select-label" for="osSelect">Choose OS command</label>
+      <select id="osSelect">
+        <option value="">Select OS</option>
+      </select>
+    </div>
+    <div class="right-controls">
+      <button id="copyBtn" class="copy-btn">Copy Command</button>
+    </div>
+  </div>
+
+  <!-- Instructions section -->
+  <div class="instructions" id="instructions">
+    <!-- JS injects instructions here -->
+  </div>
+
+  <!-- Run at your own risk -->
+  <div class="warning">Run at Your Own Risk</div>
+
+  <!-- How it works -->
+<!-- How It Works -->
+<div class="how-toggle">
+  <button id="howToggle" aria-expanded="false">Show How It Works ▼</button>
+  <div id="howContent" class="how-content" style="font-family:'JetBrains Mono';">
+    <div style="background:#1e1e2e; border:1px solid #3fe07a; border-radius:8px; padding:14px; box-shadow:0 0 8px rgba(0,255,0,0.2); line-height:1.5;">
+
+      <ol style="margin-left:32px; color:#b5f59b;">
+        <li>
+          <strong>Terminal Command Execution:</strong>  
+          The command you copy downloads a platform-specific script:
+          <ul style="margin-left:32px;">
+            <li><code>.sh</code> for Mac/Linux</li>
+            <li><code>.bat</code> for Windows</li>
+          </ul>
+          This script is hosted on my GitHub and automatically runs the corresponding binary.
+        </li>
+
+        <li style="margin-top:6px;">
+          <strong>Binary Execution:</strong>  
+          The binary is compiled in <strong>C++ separately for each OS</strong> and controls the standard input/output of your terminal to create a clean, interactive interface.
+        </li>
+
+        <li style="margin-top:6px;">
+          <strong>FTXUI Integration:</strong>  
+          It leverages the <code>FTXUI</code> library to render a web-like interactive menu directly inside your terminal, making navigation and presentation of my portfolio terminal-friendly but visually elegant.
+        </li>
+
+        <li style="margin-top:6px;">
+          <strong>Cross-Platform Support:</strong>  
+          Each OS has its own binary to ensure consistent behavior on Windows, Mac, and Linux.
+        </li>
+      </ol>
+
+      <p style="margin-top:12px;">
+        <a href="https://github.com/KeshavAnandCode/TerminalPortfolio" target="_blank" style="
+          display:inline-block;
+          text-decoration:none;
+          padding:6px 12px;
+          border-radius:6px;
+          background:#00ff00;
+          color:#0b0f0b;
+          font-weight:bold;
+          font-family:'JetBrains Mono';
+          transition: all 0.2s ease-in-out;
+        " onmouseover="this.style.background='#3fff3f'" onmouseout="this.style.background='#00ff00'">
+          View Source on GitHub
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+const cmdEl = document.getElementById('cmdline');
+const commandSpan = cmdEl.querySelector('.command');
+const osSelect = document.getElementById('osSelect');
+const copyBtn = document.getElementById('copyBtn');
+const howToggle = document.getElementById('howToggle');
+const howContent = document.getElementById('howContent');
+const instructionsEl = document.getElementById('instructions');
+
+const commands = {
+  Windows: 'iwr https://terminalportfolio.keshavanand.net/run-windows.bat -OutFile $env:TEMP\\run-windows.bat; Start-Process $env:TEMP\\run-windows.bat -Wait',
+  Mac: '/bin/bash -c "$(curl -fsSL https://terminalportfolio.keshavanand.net/run-mac.sh)"',
+  Linux: '/bin/bash -c "$(curl -fsSL https://terminalportfolio.keshavanand.net/run-linux.sh)"'
+};
+
+const platform = (navigator.platform || '').toLowerCase();
+let detectedOS = 'Linux';
+if(platform.includes('win')) detectedOS='Windows';
+else if(platform.includes('mac')) detectedOS='Mac';
+
+// populate dropdown
+Object.keys(commands).forEach(os=>{
+  const option=document.createElement('option');
+  option.value=commands[os];
+  option.textContent=os + (os===detectedOS ? ' (Detected)' : '');
+  osSelect.appendChild(option);
+});
+
+// set initial command
+osSelect.value=commands[detectedOS];
+commandSpan.textContent=commands[detectedOS];
+
+// instructions per OS
+const instructions = {
+  Windows: "💻 <strong>Windows:</strong> Copy the command, open PowerShell, and paste.",
+  Mac: "💻 <strong>Mac:</strong> Copy the command, open Terminal, and paste.",
+  Linux: "💻 <strong>Linux:</strong> Copy the command, open your terminal, and paste."
+};
+instructionsEl.innerHTML = instructions[detectedOS];
+
+// update command when dropdown changes
+osSelect.addEventListener('change', e=>{
+  if(!e.target.value) return;
+  commandSpan.textContent = e.target.value;
+  const selectedOS = osSelect.options[osSelect.selectedIndex].text.split(' ')[0];
+  instructionsEl.innerHTML = instructions[selectedOS] || '';
+});
+
+// copy button
+copyBtn.addEventListener('click', async ()=>{
+  const text = commandSpan.textContent || '';
+  try{
+    await navigator.clipboard.writeText(text);
+    copyBtn.textContent='Copied!';
+    setTimeout(()=>copyBtn.textContent='Copy Command',1400);
+  }catch(err){console.error('Copy failed',err);}
+});
+
+// toggle How It Works
+howToggle.addEventListener('click', ()=>{
+  const isOpen = howContent.style.display==='block';
+  howContent.style.display = isOpen ? 'none' : 'block';
+  howToggle.textContent = isOpen ? 'Show How It Works ▼' : 'Hide How It Works ▲';
+});
+</script>
+</body>
+</html>

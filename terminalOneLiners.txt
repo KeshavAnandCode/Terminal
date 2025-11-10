@@ -1,0 +1,3 @@
+/bin/bash -c "$(curl -fsSL https://terminalportfolio.keshavanand.net/run-mac.sh)" for Mac
+/bin/bash -c "$(curl -fsSL https://terminalportfolio.keshavanand.net/run-linux.sh)" for linux
+iwr https://terminalportfolio.keshavanand.net/run-windows.bat -OutFile \$env:TEMP\run-windows.bat; Start-Process \$env:TEMP\run-windows.bat -Wait
